@@ -23,54 +23,54 @@ c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="
 }function Be(){var a=this._data;return this._milliseconds=Ae(this._milliseconds),this._days=Ae(this._days),this._months=Ae(this._months),a.milliseconds=Ae(a.milliseconds),a.seconds=Ae(a.seconds),a.minutes=Ae(a.minutes),a.hours=Ae(a.hours),a.months=Ae(a.months),a.years=Ae(a.years),this}function Ce(a,b,c,d){var e=id(b,c);return a._milliseconds+=d*e._milliseconds,a._days+=d*e._days,a._months+=d*e._months,a._bubble()}function De(a,b){return Ce(this,a,b,1)}function Ee(a,b){return Ce(this,a,b,-1)}function Fe(a){return a<0?Math.floor(a):Math.ceil(a)}function Ge(){var e,f,g,h,i,a=this._milliseconds,b=this._days,c=this._months,d=this._data;return a>=0&&b>=0&&c>=0||a<=0&&b<=0&&c<=0||(a+=864e5*Fe(Ie(c)+b),b=0,c=0),d.milliseconds=a%1e3,e=w(a/1e3),d.seconds=e%60,f=w(e/60),d.minutes=f%60,g=w(f/60),d.hours=g%24,b+=w(g/24),i=w(He(b)),c+=i,b-=Fe(Ie(i)),h=w(c/12),c%=12,d.days=b,d.months=c,d.years=h,this}function He(a){return 4800*a/146097}function Ie(a){return 146097*a/4800}function Je(a){var b,c,d=this._milliseconds;if(a=W(a),"month"===a||"year"===a)return b=this._days+d/864e5,c=this._months+He(b),"month"===a?c:c/12;switch(b=this._days+Math.round(Ie(this._months)),a){case"week":return b/7+d/6048e5;case"day":return b+d/864e5;case"hour":return 24*b+d/36e5;case"minute":return 1440*b+d/6e4;case"second":return 86400*b+d/1e3;case"millisecond":return Math.floor(864e5*b)+d;default:throw new Error("Unknown unit "+a)}}function Ke(){return this._milliseconds+864e5*this._days+this._months%12*2592e6+31536e6*x(this._months/12)}function Le(a){return function(){return this.as(a)}}function Ue(a){return a=W(a),this[a+"s"]()}function Ve(a){return function(){return this._data[a]}}function bf(){return w(this.days()/7)}function ef(a,b,c,d,e){return e.relativeTime(b||1,!!c,a,d)}function ff(a,b,c){var d=id(a).abs(),e=cf(d.as("s")),f=cf(d.as("m")),g=cf(d.as("h")),h=cf(d.as("d")),i=cf(d.as("M")),j=cf(d.as("y")),k=e<df.s&&["s",e]||f<=1&&["m"]||f<df.m&&["mm",f]||g<=1&&["h"]||g<df.h&&["hh",g]||h<=1&&["d"]||h<df.d&&["dd",h]||i<=1&&["M"]||i<df.M&&["MM",i]||j<=1&&["y"]||["yy",j];return k[2]=b,k[3]=+a>0,k[4]=c,ef.apply(null,k)}function gf(a){return void 0===a?cf:"function"==typeof a&&(cf=a,!0)}function hf(a,b){return void 0!==df[a]&&(void 0===b?df[a]:(df[a]=b,!0))}function jf(a){var b=this.localeData(),c=ff(this,!a,b);return a&&(c=b.pastFuture(+this,c)),b.postformat(c)}function lf(){var d,e,f,a=kf(this._milliseconds)/1e3,b=kf(this._days),c=kf(this._months);d=w(a/60),e=w(d/60),a%=60,d%=60,f=w(c/12),c%=12;var g=f,h=c,i=b,j=e,k=d,l=a,m=this.asSeconds();return m?(m<0?"-":"")+"P"+(g?g+"Y":"")+(h?h+"M":"")+(i?i+"D":"")+(j||k||l?"T":"")+(j?j+"H":"")+(k?k+"M":"")+(l?l+"S":""):"P0D"}var a,n;n=Array.prototype.some?Array.prototype.some:function(a){for(var b=Object(this),c=b.length>>>0,d=0;d<c;d++)if(d in b&&a.call(this,b[d],d,b))return!0;return!1};var r=b.momentProperties=[],t=!1,B={};b.suppressDeprecationWarnings=!1,b.deprecationHandler=null;var H;H=Object.keys?Object.keys:function(a){var b,c=[];for(b in a)i(a,b)&&c.push(b);return c};var Xa,I={sameDay:"[Today at] LT",nextDay:"[Tomorrow at] LT",nextWeek:"dddd [at] LT",lastDay:"[Yesterday at] LT",lastWeek:"[Last] dddd [at] LT",sameElse:"L"},K={LTS:"h:mm:ss A",LT:"h:mm A",L:"MM/DD/YYYY",LL:"MMMM D, YYYY",LLL:"MMMM D, YYYY h:mm A",LLLL:"dddd, MMMM D, YYYY h:mm A"},M="Invalid date",O="%d",P=/\d{1,2}/,R={future:"in %s",past:"%s ago",s:"a few seconds",m:"a minute",mm:"%d minutes",h:"an hour",hh:"%d hours",d:"a day",dd:"%d days",M:"a month",MM:"%d months",y:"a year",yy:"%d years"},U={},Y={},fa=/(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,ga=/(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,ha={},ia={},oa=/\d/,pa=/\d\d/,qa=/\d{3}/,ra=/\d{4}/,sa=/[+-]?\d{6}/,ta=/\d\d?/,ua=/\d\d\d\d?/,va=/\d\d\d\d\d\d?/,wa=/\d{1,3}/,xa=/\d{1,4}/,ya=/[+-]?\d{1,6}/,za=/\d+/,Aa=/[+-]?\d+/,Ba=/Z|[+-]\d\d:?\d\d/gi,Ca=/Z|[+-]\d\d(?::?\d\d)?/gi,Da=/[+-]?\d+(\.\d{1,3})?/,Ea=/[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i,Fa={},Ka={},Oa=0,Pa=1,Qa=2,Ra=3,Sa=4,Ta=5,Ua=6,Va=7,Wa=8;Xa=Array.prototype.indexOf?Array.prototype.indexOf:function(a){var b;for(b=0;b<this.length;++b)if(this[b]===a)return b;return-1},ja("M",["MM",2],"Mo",function(){return this.month()+1}),ja("MMM",0,0,function(a){return this.localeData().monthsShort(this,a)}),ja("MMMM",0,0,function(a){return this.localeData().months(this,a)}),V("month","M"),Z("month",8),Ga("M",ta),Ga("MM",ta,pa),Ga("MMM",function(a,b){return b.monthsShortRegex(a)}),Ga("MMMM",function(a,b){return b.monthsRegex(a)}),La(["M","MM"],function(a,b){b[Pa]=x(a)-1}),La(["MMM","MMMM"],function(a,b,c,d){var e=c._locale.monthsParse(a,d,c._strict);null!=e?b[Pa]=e:m(c).invalidMonth=a});var Za=/D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?/,$a="January_February_March_April_May_June_July_August_September_October_November_December".split("_"),ab="Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),hb=Ea,jb=Ea;ja("Y",0,0,function(){var a=this.year();return a<=9999?""+a:"+"+a}),ja(0,["YY",2],0,function(){return this.year()%100}),ja(0,["YYYY",4],0,"year"),ja(0,["YYYYY",5],0,"year"),ja(0,["YYYYYY",6,!0],0,"year"),V("year","y"),Z("year",1),Ga("Y",Aa),Ga("YY",ta,pa),Ga("YYYY",xa,ra),Ga("YYYYY",ya,sa),Ga("YYYYYY",ya,sa),La(["YYYYY","YYYYYY"],Oa),La("YYYY",function(a,c){c[Oa]=2===a.length?b.parseTwoDigitYear(a):x(a)}),La("YY",function(a,c){c[Oa]=b.parseTwoDigitYear(a)}),La("Y",function(a,b){b[Oa]=parseInt(a,10)}),b.parseTwoDigitYear=function(a){return x(a)+(x(a)>68?1900:2e3)};var ob=_("FullYear",!0);ja("w",["ww",2],"wo","week"),ja("W",["WW",2],"Wo","isoWeek"),V("week","w"),V("isoWeek","W"),Z("week",5),Z("isoWeek",5),Ga("w",ta),Ga("ww",ta,pa),Ga("W",ta),Ga("WW",ta,pa),Ma(["w","ww","W","WW"],function(a,b,c,d){b[d.substr(0,1)]=x(a)});var xb={dow:0,doy:6};ja("d",0,"do","day"),ja("dd",0,0,function(a){return this.localeData().weekdaysMin(this,a)}),ja("ddd",0,0,function(a){return this.localeData().weekdaysShort(this,a)}),ja("dddd",0,0,function(a){return this.localeData().weekdays(this,a)}),ja("e",0,0,"weekday"),ja("E",0,0,"isoWeekday"),V("day","d"),V("weekday","e"),V("isoWeekday","E"),Z("day",11),Z("weekday",11),Z("isoWeekday",11),Ga("d",ta),Ga("e",ta),Ga("E",ta),Ga("dd",function(a,b){return b.weekdaysMinRegex(a)}),Ga("ddd",function(a,b){return b.weekdaysShortRegex(a)}),Ga("dddd",function(a,b){return b.weekdaysRegex(a)}),Ma(["dd","ddd","dddd"],function(a,b,c,d){var e=c._locale.weekdaysParse(a,d,c._strict);null!=e?b.d=e:m(c).invalidWeekday=a}),Ma(["d","e","E"],function(a,b,c,d){b[d]=x(a)});var Eb="Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),Gb="Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),Ib="Su_Mo_Tu_We_Th_Fr_Sa".split("_"),Pb=Ea,Rb=Ea,Tb=Ea;ja("H",["HH",2],0,"hour"),ja("h",["hh",2],0,Wb),ja("k",["kk",2],0,Xb),ja("hmm",0,0,function(){return""+Wb.apply(this)+ea(this.minutes(),2)}),ja("hmmss",0,0,function(){return""+Wb.apply(this)+ea(this.minutes(),2)+ea(this.seconds(),2)}),ja("Hmm",0,0,function(){return""+this.hours()+ea(this.minutes(),2)}),ja("Hmmss",0,0,function(){return""+this.hours()+ea(this.minutes(),2)+ea(this.seconds(),2)}),Yb("a",!0),Yb("A",!1),V("hour","h"),Z("hour",13),Ga("a",Zb),Ga("A",Zb),Ga("H",ta),Ga("h",ta),Ga("HH",ta,pa),Ga("hh",ta,pa),Ga("hmm",ua),Ga("hmmss",va),Ga("Hmm",ua),Ga("Hmmss",va),La(["H","HH"],Ra),La(["a","A"],function(a,b,c){c._isPm=c._locale.isPM(a),c._meridiem=a}),La(["h","hh"],function(a,b,c){b[Ra]=x(a),m(c).bigHour=!0}),La("hmm",function(a,b,c){var d=a.length-2;b[Ra]=x(a.substr(0,d)),b[Sa]=x(a.substr(d)),m(c).bigHour=!0}),La("hmmss",function(a,b,c){var d=a.length-4,e=a.length-2;b[Ra]=x(a.substr(0,d)),b[Sa]=x(a.substr(d,2)),b[Ta]=x(a.substr(e)),m(c).bigHour=!0}),La("Hmm",function(a,b,c){var d=a.length-2;b[Ra]=x(a.substr(0,d)),b[Sa]=x(a.substr(d))}),La("Hmmss",function(a,b,c){var d=a.length-4,e=a.length-2;b[Ra]=x(a.substr(0,d)),b[Sa]=x(a.substr(d,2)),b[Ta]=x(a.substr(e))});var ec,_b=/[ap]\.?m?\.?/i,bc=_("Hours",!0),cc={calendar:I,longDateFormat:K,invalidDate:M,ordinal:O,ordinalParse:P,relativeTime:R,months:$a,monthsShort:ab,week:xb,weekdays:Eb,weekdaysMin:Ib,weekdaysShort:Gb,meridiemParse:_b},dc={},oc=/^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?/,pc=/^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?/,qc=/Z|[+-]\d\d(?::?\d\d)?/,rc=[["YYYYYY-MM-DD",/[+-]\d{6}-\d\d-\d\d/],["YYYY-MM-DD",/\d{4}-\d\d-\d\d/],["GGGG-[W]WW-E",/\d{4}-W\d\d-\d/],["GGGG-[W]WW",/\d{4}-W\d\d/,!1],["YYYY-DDD",/\d{4}-\d{3}/],["YYYY-MM",/\d{4}-\d\d/,!1],["YYYYYYMMDD",/[+-]\d{10}/],["YYYYMMDD",/\d{8}/],["GGGG[W]WWE",/\d{4}W\d{3}/],["GGGG[W]WW",/\d{4}W\d{2}/,!1],["YYYYDDD",/\d{7}/]],sc=[["HH:mm:ss.SSSS",/\d\d:\d\d:\d\d\.\d+/],["HH:mm:ss,SSSS",/\d\d:\d\d:\d\d,\d+/],["HH:mm:ss",/\d\d:\d\d:\d\d/],["HH:mm",/\d\d:\d\d/],["HHmmss.SSSS",/\d\d\d\d\d\d\.\d+/],["HHmmss,SSSS",/\d\d\d\d\d\d,\d+/],["HHmmss",/\d\d\d\d\d\d/],["HHmm",/\d\d\d\d/],["HH",/\d\d/]],tc=/^\/?Date\((\-?\d+)/i;b.createFromInputFallback=A("value provided is not in a recognized ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.",function(a){a._d=new Date(a._i+(a._useUTC?" UTC":""))}),b.ISO_8601=function(){};var Jc=A("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/",function(){var a=Ic.apply(null,arguments);return this.isValid()&&a.isValid()?a<this?this:a:p()}),Kc=A("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/",function(){var a=Ic.apply(null,arguments);return this.isValid()&&a.isValid()?a>this?this:a:p()}),Oc=function(){return Date.now?Date.now():+new Date};Sc("Z",":"),Sc("ZZ",""),Ga("Z",Ca),Ga("ZZ",Ca),La(["Z","ZZ"],function(a,b,c){c._useUTC=!0,c._tzm=Uc(Ca,a)});var Tc=/([\+\-]|\d\d)/gi;b.updateOffset=function(){};var gd=/^(\-)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/,hd=/^(-)?P(?:(-?[0-9,.]*)Y)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)W)?(?:(-?[0-9,.]*)D)?(?:T(?:(-?[0-9,.]*)H)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)S)?)?$/;id.fn=Pc.prototype;var od=md(1,"add"),pd=md(-1,"subtract");b.defaultFormat="YYYY-MM-DDTHH:mm:ssZ",b.defaultFormatUtc="YYYY-MM-DDTHH:mm:ss[Z]";var Jd=A("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.",function(a){return void 0===a?this.localeData():this.locale(a)});ja(0,["gg",2],0,function(){return this.weekYear()%100}),ja(0,["GG",2],0,function(){return this.isoWeekYear()%100}),Xd("gggg","weekYear"),Xd("ggggg","weekYear"),Xd("GGGG","isoWeekYear"),Xd("GGGGG","isoWeekYear"),V("weekYear","gg"),V("isoWeekYear","GG"),Z("weekYear",1),Z("isoWeekYear",1),Ga("G",Aa),Ga("g",Aa),Ga("GG",ta,pa),Ga("gg",ta,pa),Ga("GGGG",xa,ra),Ga("gggg",xa,ra),Ga("GGGGG",ya,sa),Ga("ggggg",ya,sa),Ma(["gggg","ggggg","GGGG","GGGGG"],function(a,b,c,d){b[d.substr(0,2)]=x(a)}),Ma(["gg","GG"],function(a,c,d,e){c[e]=b.parseTwoDigitYear(a)}),ja("Q",0,"Qo","quarter"),V("quarter","Q"),Z("quarter",7),Ga("Q",oa),La("Q",function(a,b){b[Pa]=3*(x(a)-1)}),ja("D",["DD",2],"Do","date"),V("date","D"),Z("date",9),Ga("D",ta),Ga("DD",ta,pa),Ga("Do",function(a,b){return a?b._ordinalParse:b._ordinalParseLenient}),La(["D","DD"],Qa),La("Do",function(a,b){b[Qa]=x(a.match(ta)[0],10)});var de=_("Date",!0);ja("DDD",["DDDD",3],"DDDo","dayOfYear"),V("dayOfYear","DDD"),Z("dayOfYear",4),Ga("DDD",wa),Ga("DDDD",qa),La(["DDD","DDDD"],function(a,b,c){c._dayOfYear=x(a)}),ja("m",["mm",2],0,"minute"),V("minute","m"),Z("minute",14),Ga("m",ta),Ga("mm",ta,pa),La(["m","mm"],Sa);var fe=_("Minutes",!1);ja("s",["ss",2],0,"second"),V("second","s"),Z("second",15),Ga("s",ta),Ga("ss",ta,pa),La(["s","ss"],Ta);var ge=_("Seconds",!1);ja("S",0,0,function(){return~~(this.millisecond()/100)}),ja(0,["SS",2],0,function(){return~~(this.millisecond()/10)}),ja(0,["SSS",3],0,"millisecond"),ja(0,["SSSS",4],0,function(){return 10*this.millisecond()}),ja(0,["SSSSS",5],0,function(){return 100*this.millisecond()}),ja(0,["SSSSSS",6],0,function(){return 1e3*this.millisecond()}),ja(0,["SSSSSSS",7],0,function(){return 1e4*this.millisecond()}),ja(0,["SSSSSSSS",8],0,function(){return 1e5*this.millisecond()}),ja(0,["SSSSSSSSS",9],0,function(){return 1e6*this.millisecond()}),V("millisecond","ms"),Z("millisecond",16),Ga("S",wa,oa),Ga("SS",wa,pa),Ga("SSS",wa,qa);var he;for(he="SSSS";he.length<=9;he+="S")Ga(he,za);for(he="S";he.length<=9;he+="S")La(he,ie);var je=_("Milliseconds",!1);ja("z",0,0,"zoneAbbr"),ja("zz",0,0,"zoneName");var me=u.prototype;me.add=od,me.calendar=rd,me.clone=sd,me.diff=zd,me.endOf=Md,me.format=Dd,me.from=Ed,me.fromNow=Fd,me.to=Gd,me.toNow=Hd,me.get=ca,me.invalidAt=Vd,me.isAfter=td,me.isBefore=ud,me.isBetween=vd,me.isSame=wd,me.isSameOrAfter=xd,me.isSameOrBefore=yd,me.isValid=Td,me.lang=Jd,me.locale=Id,me.localeData=Kd,me.max=Kc,me.min=Jc,me.parsingFlags=Ud,me.set=da,me.startOf=Ld,me.subtract=pd,me.toArray=Qd,me.toObject=Rd,me.toDate=Pd,me.toISOString=Cd,me.toJSON=Sd,me.toString=Bd,me.unix=Od,me.valueOf=Nd,me.creationData=Wd,me.year=ob,me.isLeapYear=pb,me.weekYear=Yd,me.isoWeekYear=Zd,me.quarter=me.quarters=ce,me.month=fb,me.daysInMonth=gb,me.week=me.weeks=Ab,me.isoWeek=me.isoWeeks=Bb,me.weeksInYear=_d,me.isoWeeksInYear=$d,me.date=de,me.day=me.days=Mb,me.weekday=Nb,me.isoWeekday=Ob,me.dayOfYear=ee,me.hour=me.hours=bc,me.minute=me.minutes=fe,me.second=me.seconds=ge,me.millisecond=me.milliseconds=je,me.utcOffset=Xc,me.utc=Zc,me.local=$c,me.parseZone=_c,me.hasAlignedHourOffset=ad,me.isDST=bd,me.isLocal=dd,me.isUtcOffset=ed,me.isUtc=fd,me.isUTC=fd,me.zoneAbbr=ke,me.zoneName=le,me.dates=A("dates accessor is deprecated. Use date instead.",de),me.months=A("months accessor is deprecated. Use month instead",fb),me.years=A("years accessor is deprecated. Use year instead",ob),me.zone=A("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/",Yc),me.isDSTShifted=A("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information",cd);var ne=me,re=G.prototype;re.calendar=J,re.longDateFormat=L,re.invalidDate=N,re.ordinal=Q,re.preparse=qe,re.postformat=qe,re.relativeTime=S,re.pastFuture=T,re.set=E,re.months=_a,re.monthsShort=bb,re.monthsParse=db,re.monthsRegex=kb,re.monthsShortRegex=ib,re.week=wb,re.firstDayOfYear=zb,re.firstDayOfWeek=yb,re.weekdays=Fb,re.weekdaysMin=Jb,re.weekdaysShort=Hb,re.weekdaysParse=Lb,re.weekdaysRegex=Qb,re.weekdaysShortRegex=Sb,re.weekdaysMinRegex=Ub,re.isPM=$b,re.meridiem=ac,ic("en",{ordinalParse:/\d{1,2}(th|st|nd|rd)/,ordinal:function(a){var b=a%10,c=1===x(a%100/10)?"th":1===b?"st":2===b?"nd":3===b?"rd":"th";return a+c}}),b.lang=A("moment.lang is deprecated. Use moment.locale instead.",ic),b.langData=A("moment.langData is deprecated. Use moment.localeData instead.",lc);var Ae=Math.abs,Me=Le("ms"),Ne=Le("s"),Oe=Le("m"),Pe=Le("h"),Qe=Le("d"),Re=Le("w"),Se=Le("M"),Te=Le("y"),We=Ve("milliseconds"),Xe=Ve("seconds"),Ye=Ve("minutes"),Ze=Ve("hours"),$e=Ve("days"),_e=Ve("months"),af=Ve("years"),cf=Math.round,df={s:45,m:45,h:22,d:26,M:11},kf=Math.abs,mf=Pc.prototype;mf.abs=Be,mf.add=De,mf.subtract=Ee,mf.as=Je,mf.asMilliseconds=Me,mf.asSeconds=Ne,mf.asMinutes=Oe,mf.asHours=Pe,mf.asDays=Qe,mf.asWeeks=Re,mf.asMonths=Se,mf.asYears=Te,mf.valueOf=Ke,mf._bubble=Ge,mf.get=Ue,mf.milliseconds=We,mf.seconds=Xe,mf.minutes=Ye,mf.hours=Ze,mf.days=$e,mf.weeks=bf,mf.months=_e,mf.years=af,mf.humanize=jf,mf.toISOString=lf,mf.toString=lf,mf.toJSON=lf,mf.locale=Id,mf.localeData=Kd,mf.toIsoString=A("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)",lf),mf.lang=Jd,ja("X",0,0,"unix"),ja("x",0,0,"valueOf"),Ga("x",Aa),Ga("X",Da),La("X",function(a,b,c){c._d=new Date(1e3*parseFloat(a,10))}),La("x",function(a,b,c){c._d=new Date(x(a))}),b.version="2.15.1",c(Ic),b.fn=ne,b.min=Mc,b.max=Nc,b.now=Oc,b.utc=k,b.unix=oe,b.months=ve,b.isDate=g,b.locale=ic,b.invalid=p,b.duration=id,b.isMoment=v,b.weekdays=xe,b.parseZone=pe,b.localeData=lc,b.isDuration=Qc,b.monthsShort=we,b.weekdaysMin=ze,b.defineLocale=jc,b.updateLocale=kc,b.locales=mc,b.weekdaysShort=ye,b.normalizeUnits=W,b.relativeTimeRounding=gf,b.relativeTimeThreshold=hf,b.calendarFormat=qd,b.prototype=ne;var nf=b;return nf});;
 jQuery(document).ready(function($){
     //open/close lateral filter
-    $('.cd-filter-trigger').on('click', function(){
+    $('.aside-filter-trigger').on('click', function(){
         triggerFilter(true);
     });
-    $('.cd-filter .cd-close').on('click', function(){
+    $('.aside-filter .close-filter').on('click', function(){
         triggerFilter(false);
     });
 
     function triggerFilter($bool) {
-        var elementsToTrigger = $([$('.cd-filter-trigger'), $('.cd-filter'), $('.cd-tab-filter'), $('.cd-gallery')]);
+        var elementsToTrigger = $([$('.aside-filter-trigger'), $('.aside-filter'), $('.tab-filter-wrapper'), $('.plugins')]);
         elementsToTrigger.each(function(){
             $(this).toggleClass('filter-is-visible', $bool);
         });
     }
 
     //mobile version - detect click event on filters tab
-    var filter_tab_placeholder = $('.cd-tab-filter .placeholder a'),
+    var filter_tab_placeholder = $('.tab-filter-wrapper .placeholder a'),
         filter_tab_placeholder_default_value = 'Select',
         filter_tab_placeholder_text = filter_tab_placeholder.text();
 
-    $('.cd-tab-filter li').on('click', function(event){
+    $('.tab-filter-wrapper li').on('click', function(event){
         //detect which tab filter item was selected
         var selected_filter = $(event.target).data('type');
 
         //check if user has clicked the placeholder item
         if( $(event.target).is(filter_tab_placeholder) ) {
             (filter_tab_placeholder_default_value == filter_tab_placeholder.text()) ? filter_tab_placeholder.text(filter_tab_placeholder_text) : filter_tab_placeholder.text(filter_tab_placeholder_default_value) ;
-            $('.cd-tab-filter').toggleClass('is-open');
+            $('.tab-filter-wrapper').toggleClass('is-open');
 
             //check if user has clicked a filter already selected
         } else if( filter_tab_placeholder.data('type') == selected_filter ) {
             filter_tab_placeholder.text($(event.target).text());
-            $('.cd-tab-filter').removeClass('is-open');
+            $('.tab-filter-wrapper').removeClass('is-open');
 
         } else {
             //close the dropdown and change placeholder text/data-type value
-            $('.cd-tab-filter').removeClass('is-open');
+            $('.tab-filter-wrapper').removeClass('is-open');
             filter_tab_placeholder.text($(event.target).text()).data('type', selected_filter);
             filter_tab_placeholder_text = $(event.target).text();
 
             //add class selected to the selected filter item
-            $('.cd-tab-filter .selected').removeClass('selected');
+            $('.tab-filter-wrapper .selected').removeClass('selected');
             $(event.target).addClass('selected');
         }
     });
 
-    //close filter dropdown inside lateral .cd-filter
-    $('.cd-filter-block h4').on('click', function(){
-        $(this).toggleClass('closed').siblings('.cd-filter-content').slideToggle(300);
+    //close filter dropdown inside lateral .aside-filter
+    $('.aside-filter-block h4').on('click', function(){
+        $(this).toggleClass('closed').siblings('.aside-filter-content').slideToggle(300);
     })
 
     //fix lateral filter and gallery on scrolling
@@ -79,9 +79,9 @@ jQuery(document).ready(function($){
     });
 
     function fixGallery() {
-        var offsetTop = $('.cd-main-content').offset().top,
+        var offsetTop = $('.home-content').offset().top,
             scrollTop = $(window).scrollTop();
-        ( scrollTop >= offsetTop ) ? $('.cd-main-content').addClass('is-fixed') : $('.cd-main-content').removeClass('is-fixed');
+        ( scrollTop >= offsetTop ) ? $('.home-content').addClass('is-fixed') : $('.home-content').removeClass('is-fixed');
     }
 
     /************************************
@@ -93,16 +93,16 @@ jQuery(document).ready(function($){
      *************************************/
 
     buttonFilter.init();
-    $('.cd-gallery ul').mixItUp({
+    $('.plugins ul').mixItUp({
         controls: {
             enable: false
         },
         callbacks: {
             onMixStart: function(){
-                $('.cd-fail-message').fadeOut(200);
+                $('.no-result').fadeOut(200);
             },
             onMixFail: function(){
-                $('.cd-fail-message').fadeIn(200);
+                $('.no-result').fadeIn(200);
             }
         }
     });
@@ -120,10 +120,10 @@ jQuery(document).ready(function($){
         };
     })();
 
-    $(".cd-filter-content input[type='search']").keyup(function(){
+    $(".aside-filter-content input[type='search']").keyup(function(){
         // Delay function invoked to make sure user stopped typing
         delay(function(){
-            inputText = $(".cd-filter-content input[type='search']").val().toLowerCase();
+            inputText = $(".aside-filter-content input[type='search']").val().toLowerCase();
             // Check to see if input field is empty
             if ((inputText.length) > 0) {
                 $('.mix').each(function() {
@@ -137,10 +137,10 @@ jQuery(document).ready(function($){
                         $matching = $matching.not(this);
                     }
                 });
-                $('.cd-gallery ul').mixItUp('filter', $matching);
+                $('.plugins ul').mixItUp('filter', $matching);
             } else {
                 // resets the filter to show all item if input is empty
-                $('.cd-gallery ul').mixItUp('filter', 'all');
+                $('.plugins ul').mixItUp('filter', 'all');
             }
         }, 200 );
     });
@@ -161,10 +161,10 @@ var buttonFilter = {
     init: function(){
         var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "buttonFilter" object so that we can share methods and properties between all parts of the object.
 
-        self.$filters = $('.cd-main-content');
-        self.$container = $('.cd-gallery ul');
+        self.$filters = $('.home-content');
+        self.$container = $('.plugins ul');
 
-        self.$filters.find('.cd-filters').each(function(){
+        self.$filters.find('.tab-filter-inner').each(function(){
             var $this = $(this);
 
             self.groups.push({

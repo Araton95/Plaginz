@@ -1,53 +1,53 @@
 jQuery(document).ready(function($){
     //open/close lateral filter
-    $('.cd-filter-trigger').on('click', function(){
+    $('.aside-filter-trigger').on('click', function(){
         triggerFilter(true);
     });
-    $('.cd-filter .cd-close').on('click', function(){
+    $('.aside-filter .close-filter').on('click', function(){
         triggerFilter(false);
     });
 
     function triggerFilter($bool) {
-        var elementsToTrigger = $([$('.cd-filter-trigger'), $('.cd-filter'), $('.cd-tab-filter'), $('.cd-gallery')]);
+        var elementsToTrigger = $([$('.aside-filter-trigger'), $('.aside-filter'), $('.tab-filter-wrapper'), $('.plugins')]);
         elementsToTrigger.each(function(){
             $(this).toggleClass('filter-is-visible', $bool);
         });
     }
 
     //mobile version - detect click event on filters tab
-    var filter_tab_placeholder = $('.cd-tab-filter .placeholder a'),
+    var filter_tab_placeholder = $('.tab-filter-wrapper .placeholder a'),
         filter_tab_placeholder_default_value = 'Select',
         filter_tab_placeholder_text = filter_tab_placeholder.text();
 
-    $('.cd-tab-filter li').on('click', function(event){
+    $('.tab-filter-wrapper li').on('click', function(event){
         //detect which tab filter item was selected
         var selected_filter = $(event.target).data('type');
 
         //check if user has clicked the placeholder item
         if( $(event.target).is(filter_tab_placeholder) ) {
             (filter_tab_placeholder_default_value == filter_tab_placeholder.text()) ? filter_tab_placeholder.text(filter_tab_placeholder_text) : filter_tab_placeholder.text(filter_tab_placeholder_default_value) ;
-            $('.cd-tab-filter').toggleClass('is-open');
+            $('.tab-filter-wrapper').toggleClass('is-open');
 
             //check if user has clicked a filter already selected
         } else if( filter_tab_placeholder.data('type') == selected_filter ) {
             filter_tab_placeholder.text($(event.target).text());
-            $('.cd-tab-filter').removeClass('is-open');
+            $('.tab-filter-wrapper').removeClass('is-open');
 
         } else {
             //close the dropdown and change placeholder text/data-type value
-            $('.cd-tab-filter').removeClass('is-open');
+            $('.tab-filter-wrapper').removeClass('is-open');
             filter_tab_placeholder.text($(event.target).text()).data('type', selected_filter);
             filter_tab_placeholder_text = $(event.target).text();
 
             //add class selected to the selected filter item
-            $('.cd-tab-filter .selected').removeClass('selected');
+            $('.tab-filter-wrapper .selected').removeClass('selected');
             $(event.target).addClass('selected');
         }
     });
 
-    //close filter dropdown inside lateral .cd-filter
-    $('.cd-filter-block h4').on('click', function(){
-        $(this).toggleClass('closed').siblings('.cd-filter-content').slideToggle(300);
+    //close filter dropdown inside lateral .aside-filter
+    $('.aside-filter-block h4').on('click', function(){
+        $(this).toggleClass('closed').siblings('.aside-filter-content').slideToggle(300);
     })
 
     //fix lateral filter and gallery on scrolling
@@ -56,9 +56,9 @@ jQuery(document).ready(function($){
     });
 
     function fixGallery() {
-        var offsetTop = $('.cd-main-content').offset().top,
+        var offsetTop = $('.home-content').offset().top,
             scrollTop = $(window).scrollTop();
-        ( scrollTop >= offsetTop ) ? $('.cd-main-content').addClass('is-fixed') : $('.cd-main-content').removeClass('is-fixed');
+        ( scrollTop >= offsetTop ) ? $('.home-content').addClass('is-fixed') : $('.home-content').removeClass('is-fixed');
     }
 
     /************************************
@@ -70,16 +70,16 @@ jQuery(document).ready(function($){
      *************************************/
 
     buttonFilter.init();
-    $('.cd-gallery ul').mixItUp({
+    $('.plugins ul').mixItUp({
         controls: {
             enable: false
         },
         callbacks: {
             onMixStart: function(){
-                $('.cd-fail-message').fadeOut(200);
+                $('.no-result').fadeOut(200);
             },
             onMixFail: function(){
-                $('.cd-fail-message').fadeIn(200);
+                $('.no-result').fadeIn(200);
             }
         }
     });
@@ -97,10 +97,10 @@ jQuery(document).ready(function($){
         };
     })();
 
-    $(".cd-filter-content input[type='search']").keyup(function(){
+    $(".aside-filter-content input[type='search']").keyup(function(){
         // Delay function invoked to make sure user stopped typing
         delay(function(){
-            inputText = $(".cd-filter-content input[type='search']").val().toLowerCase();
+            inputText = $(".aside-filter-content input[type='search']").val().toLowerCase();
             // Check to see if input field is empty
             if ((inputText.length) > 0) {
                 $('.mix').each(function() {
@@ -114,10 +114,10 @@ jQuery(document).ready(function($){
                         $matching = $matching.not(this);
                     }
                 });
-                $('.cd-gallery ul').mixItUp('filter', $matching);
+                $('.plugins ul').mixItUp('filter', $matching);
             } else {
                 // resets the filter to show all item if input is empty
-                $('.cd-gallery ul').mixItUp('filter', 'all');
+                $('.plugins ul').mixItUp('filter', 'all');
             }
         }, 200 );
     });
@@ -138,10 +138,10 @@ var buttonFilter = {
     init: function(){
         var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "buttonFilter" object so that we can share methods and properties between all parts of the object.
 
-        self.$filters = $('.cd-main-content');
-        self.$container = $('.cd-gallery ul');
+        self.$filters = $('.home-content');
+        self.$container = $('.plugins ul');
 
-        self.$filters.find('.cd-filters').each(function(){
+        self.$filters.find('.tab-filter-inner').each(function(){
             var $this = $(this);
 
             self.groups.push({

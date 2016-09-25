@@ -45,7 +45,7 @@ Main Components
 
 -------------------------------- */
 
-.cd-header {
+.header {
 	position: relative;
 	height: 150px;
 	background-color: $color-1;
@@ -67,24 +67,24 @@ Main Components
 	}
 }
 
-.cd-main-content {
+.home-content {
 	position: relative;
 	min-height: 100vh;
 	@include clearfix;
 
 	&.is-fixed {
-		.cd-tab-filter-wrapper {
+		.header-filter {
 			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
 		}
 
-		.cd-gallery {
+		.plugins {
 			padding-top: 26px+$tab-filter-height;
 		}
 
-		.cd-filter {
+		.aside-filter {
 			position: fixed;
 			height: 100vh;
 			overflow: hidden;
@@ -96,18 +96,18 @@ Main Components
 			}
 		}
 
-		.cd-filter-trigger {
+		.aside-filter-trigger {
 			position: fixed;
 		}
 
 		@include MQ(M) {
-			.cd-gallery {
+			.plugins {
 				padding-top: 40px+$tab-filter-height;
 			}
 		}
 
 		@include MQ(L) {
-			.cd-gallery {
+			.plugins {
 				padding-top: 50px+$tab-filter-height;
 			}
 		}
@@ -120,14 +120,14 @@ xtab-filter
 
 -------------------------------- */
 
-.cd-tab-filter-wrapper {
+.header-filter {
 	background-color: $color-3;
 	box-shadow: 0 1px 1px rgba(#000, .08);
 	z-index: 1;
 	@include clearfix;
 }
 
-.cd-tab-filter {
+.tab-filter-wrapper {
 	/* tabbed navigation style on mobile - dropdown */
 	position: relative;
 	height: $tab-filter-height;
@@ -172,7 +172,7 @@ xtab-filter
 
 	a {
 		display: block;
-		/* set same size of the .cd-tab-filter */
+		/* set same size of the .tab-filter-wrapper */
 		height: $tab-filter-height;
 		width: 140px;
 		line-height: $tab-filter-height;
@@ -279,7 +279,7 @@ xgallery
 
 -------------------------------- */
 
-.cd-gallery {
+.plugins {
 	padding: 26px 5%;
 	width: 100%;
 
@@ -301,7 +301,7 @@ xgallery
 		width: 100%;
 	}
 
-	.cd-fail-message {
+	.no-result {
 		display: none;
 		text-align: center;
 	}
@@ -342,7 +342,7 @@ xfilter
 
 -------------------------------- */
 
-.cd-filter {
+.aside-filter {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -376,7 +376,7 @@ xfilter
 		padding: $tab-filter-height+20px 20px;
 	} 
 
-	.cd-close {
+	.close-filter {
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -403,7 +403,7 @@ xfilter
 		@include transform(translateX(0));
 		box-shadow: 4px 4px 20px rgba(#000, .2);
 
-		.cd-close {
+		.close-filter {
 			opacity: 1;
 		}
 	}
@@ -417,7 +417,7 @@ xfilter
 	}
 }
 
-.cd-filter-trigger {
+.aside-filter-trigger {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -470,7 +470,7 @@ xcustom form elements
 
 -------------------------------- */
 
-.cd-filter-block {
+.aside-filter-block {
 	margin-bottom: 1.6em;
 
 	h4 {
@@ -547,12 +547,12 @@ xcustom form elements
 		display: none;
 	}
 
-	.cd-select {
+	.select-box {
 		/* select element wrapper */
 		position: relative;
 	}
 
-	.cd-select::after {
+	.select-box::after {
 		/* switcher arrow for select element */
 		content: '';
 		position: absolute;
@@ -661,7 +661,7 @@ xcustom form elements
 
 @-moz-document url-prefix(){
 	/* hide custom arrow on Firefox - select element */
-	.cd-filter-block .cd-select::after {
+	.aside-filter-block .select-box::after {
 		display: none;
 	}
 }
