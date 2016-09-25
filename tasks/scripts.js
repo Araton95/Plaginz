@@ -3,7 +3,6 @@ var cache = require('gulp-cached');
 var remember = require('gulp-remember');
 var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
-var babel = require("gulp-babel");
 var concat = require('gulp-concat');
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
@@ -14,10 +13,8 @@ gulp.task('scripts', ['scripts.app', 'scripts.vendor']);
 
 gulp.task('scripts.app', function () {
 	return gulp.src([
-		'site/src/js/utils/*.js',
-		'site/src/js/Component.js',
-		'site/src/js/Components/*.js',
-		'site/src/js/Application.js'
+		'site/src/js/Vendor/*.js',
+		'site/src/js/Main.js'
 	])
 		.pipe(plumber({
 			handleError: function (err) {
@@ -27,7 +24,6 @@ gulp.task('scripts.app', function () {
 		}))
 		.pipe(cache('scripts'))
 		.pipe(sourcemaps.init())
-		.pipe(babel())
 		.pipe(remember('scripts'))
 		.pipe(concat('app.js', { newLine: ';\n' }))
 		.pipe(gulpif(production, uglify()))
@@ -37,9 +33,9 @@ gulp.task('scripts.app', function () {
 
 gulp.task('scripts.vendor', function () {
 	return gulp.src([
-		'site/src/vendor/jquery-1.11.3.js',
-		'site/src/vendor/moment.min.js',
-		'site/src/vendor/*.js'
+		'site/src/js/Vendor/modernizr.js',
+		'site/src/js/Vendor/jquery-1.11.3.js',
+		'site/src/js/Vendor/*.js'
 	])
 		.pipe(plumber({
 			handleError: function (err) {
