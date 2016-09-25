@@ -1,0 +1,80 @@
+MainPage:
+  extends: PageNode
+  singleton: true
+  searchable: true
+  cms:
+    title: Главная страница
+    icon: content-2
+  fields:
+    example:
+      type: string
+      cms:
+        label: Строка
+
+Locations:
+  parents: [ GoogleMaps ]
+  cms:
+    title: Координаты
+  fields:
+    name:
+      type: string
+      cms:
+        label: Название места
+    coords:
+      type: geoCoords
+      cms:
+        label: Координаты
+
+GoogleMaps:
+  extends: PageNode
+  singleton: true
+  searchable: true
+  cms:
+    title: Страница карты
+    icon: content-2
+  fields:
+    content:
+      type: html
+      hidden: true
+    locations:
+      type: entities
+      entityTypes: [ Locations ]
+      summaryFields:
+        Locations: [ name ]
+      cms:
+        label: Координаты
+
+Slider:
+  extends: PageNode
+  singleton: true
+  searchable: true
+  cms:
+    title: Страница слайдера
+    icon: content-2
+  fields:
+    content:
+      type: html
+      hidden: true
+    images:
+      type: gallery
+      cms:
+        label: Картинки
+
+GoogleAnalytics:
+  extends: PageNode
+  singleton: true
+  searchable: true
+  cms:
+    title: Страница аналитики
+    icon: content-2
+  fields:
+    content:
+      type: html
+      cms:
+        label: Описание
+
+SearchPage:
+  extends: PageNode
+  cms:
+    title: Страница поиска
+

@@ -1,0 +1,15 @@
+Default:
+  title: Обратная связь
+  fields:
+    name:
+      type: string
+      required: true
+    phone:
+      type: string
+      required: true
+    message:
+      type: text
+  emailNotificationTemplate: >
+    Обратная связь, имя <b>{{ name }}</b> тел. <b>{{ phone }}</b>
+  smsNotificationTemplate: >
+    Обратная связь, имя {{ name }} тел. {{ phone }}

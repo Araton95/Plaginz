@@ -1,0 +1,20 @@
+<?php
+
+Config::$db['host']     = 'DB_HOST';
+Config::$db['username'] = 'DB_USER';
+Config::$db['password'] = 'DB_PASSWORD';
+Config::$db['dbname']   = 'DB_DATABASE';
+
+// Config::$languages = array('ru', 'en');
+// Config::$defaultLanguage = 'en';
+
+Config::$smsTransport['login'] = '';
+Config::$smsTransport['password'] = '';
+Config::$smsTransport['senderName'] = '';
+
+Config::$dbLogEnabled = false;
+Config::$debug = true;
+Config::$profileReportEnabled = false;
+
+// Able to use the ajax api.
+Config::$api['enabled'] = true;
