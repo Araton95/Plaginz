@@ -593,7 +593,7 @@ xgallery
       float: right;
       transition: width 0.3s; }
       .plugins li {
-        width: 23%; }
+        width: 10%; }
       .plugins.filter-is-visible {
         /* reduce width when filter is visible */
         width: 80%; } }

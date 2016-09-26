@@ -121,12 +121,11 @@ jQuery(document).ready(function($){
             }
         }, 200 );
     });
-});
 
-/*****************************************************
- MixItUp - Define a single object literal
- to contain all filter custom functionality
- *****************************************************/
+    $(function() {
+        $("li.mix img").lazyload();
+    });
+});
 var buttonFilter = {
     // Declare any variables we will need as properties of the object
     $filters: null,
