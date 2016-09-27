@@ -13,6 +13,7 @@ gulp.task('scripts', ['scripts.app', 'scripts.vendor']);
 
 gulp.task('scripts.app', function () {
 	return gulp.src([
+		'site/src/js/Vendor/jquery-1.11.3.min.js',
 		'site/src/js/Vendor/*.js',
 		'site/src/js/Main.js'
 	])
@@ -34,7 +35,9 @@ gulp.task('scripts.app', function () {
 gulp.task('scripts.vendor', function () {
 	return gulp.src([
 		'site/src/js/Vendor/modernizr.js',
-		'site/src/js/Vendor/jquery-1.11.3.js',
+		'site/src/js/Vendor/jquery-1.11.3.min.js',
+		'site/src/js/Vendor/jquery-ui-1.10.2.custom.min.js',
+		'site/src/js/Vendor/filter.min.js',
 		'site/src/js/Vendor/*.js'
 	])
 		.pipe(plumber({
