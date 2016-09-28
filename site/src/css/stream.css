@@ -20,7 +20,11 @@ select, textarea, input{
 }
 
 select:focus, textarea:focus, input:focus{
-  border-color: #CCC !important;
+   border-color: #CCC;
+ }
+
+select:hover, textarea:hover, input:hover{
+  border-color: rgba(0, 0, 0, 0.36);
 }
 
 .container{
@@ -36,7 +40,7 @@ select:focus, textarea:focus, input:focus{
   /* background-color: #f5f5f5; */
 }
 
-.sidebar.col-md-3{
+.sidebar.col-xs-3{
   padding: 0px;
 }
 
@@ -97,9 +101,9 @@ select:focus, textarea:focus, input:focus{
 
 .thumbnail{
   /* background-color: #EEE; */
-  min-height: 265px;
-  border-radius: 0;
-  min-height: 300px;
+  height: 265px;
+  border-radius: 2px;
+  margin-bottom: 0;
 }
 
 .label{
@@ -114,11 +118,6 @@ select:focus, textarea:focus, input:focus{
   font-weight: bold;
   float: left;
   width: 65px;
-}
-
-.caption h4{
-  color: #b22222;
-  min-height: 45px;
 }
 
 .field-row{
@@ -138,6 +137,7 @@ select:focus, textarea:focus, input:focus{
 }
 
 .rating{
+  display: none;
   float: right;
   font-size: 14px;
   margin-top: -5px;
