@@ -4,6 +4,7 @@ var remember = require('gulp-remember');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
+var less = require('gulp-less');
 var csso = require('gulp-csso');
 var gulpif = require('gulp-if');
 
@@ -13,7 +14,8 @@ gulp.task('styles', function () {
 	return gulp.src([
 		'site/src/css/reset.css',
 		'site/src/css/style.css',
-		'site/src/css/*.css'
+		'site/src/css/*.css',
+		'site/src/css/*.less'
 	])
 		.pipe(plumber({
 			handleError: function (err) {
@@ -22,6 +24,7 @@ gulp.task('styles', function () {
 			}
 		}))
 		.pipe(cache('styles'))
+		.pipe(less())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade:  false
