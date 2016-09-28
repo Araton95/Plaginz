@@ -15,7 +15,7 @@ gulp.task('styles', function () {
 		'site/src/css/reset.css',
 		'site/src/css/style.css',
 		'site/src/css/*.css',
-		'site/src/css/*.less'
+		'site/src/css/style.less'
 	])
 		.pipe(plumber({
 			handleError: function (err) {
