@@ -1,18 +1,21 @@
 @baseblue : #33b5e5;
 @red : #ff4444;
 @header : #34495e;
+@green : #0f9d58;
 @white : #fff;
 @ligthgray : #e7e7e7;
 
 .card-shadow {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+.container {
+  width: 98vw;
+}
 
 body {
   .header {
     background-color: @baseblue;
     text-align: center;
-    padding: 10px 0;
 
     h1 {
       color: @white;
@@ -27,7 +30,7 @@ body {
 
     .container {
       .row {
-        .col-xs-3 {
+        .col-lg-2 {
           padding: 0;
           height: 34px;
 
@@ -36,7 +39,7 @@ body {
           }
         }
 
-        .col-xs-9 {
+        .col-lg-10 {
           height: 34px;
           .content {
             margin-top: 0;
@@ -57,33 +60,90 @@ body {
 
   .filter {
     background-color: @ligthgray;
-    padding: 15px 0;
 
     .container {
+      width: 100vw;
+
       .row {
         .sidebar {
-          .well {
-            border-radius: 2px;
-            width: 99%;
-            margin: 0 auto 20px auto;
+            position: relative;
+            padding: 0;
+
+            .well {
+              border-radius: 2px;
+              width: 99%;
+              margin:0;
+              .card-shadow;
+            }
+          }
+
+        .col-lg-10 {
+          padding: 10px 50px 0 50px;
+
+          .thumbnail {
+            padding: 0;
             .card-shadow;
-          }
-        }
 
-        .caption {
-          h4 {
-            color: @red;
-            min-height: 45px;
-          }
-        }
+            .caption {
+              position: relative;
+              padding: 0;
 
-        .thumbnail {
-          .card-shadow;
-          transition: 300ms ease-in-out;
+              .image {
+                position: relative;
 
-          &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 1px 14px #777;
+                .plugin-pic {
+                  width: 100%;
+                }
+
+                .download {
+                  position: absolute;
+                  bottom: -18px;
+                  right: 3px;
+                  width: 40px;
+                  height: 40px;
+                  line-height: 40px;
+                  text-align: center;
+                  border-radius: 50%;
+                  background-color: #fff;
+                  transition: all 0.3s ease;
+                  outline: 0;
+                  box-shadow:
+                          0 2px 4px rgba(0,0,0, 0.12),
+                          0 2px 4px rgba(0,0,0, 0.24);
+
+                  &:hover,&:focus {
+                    text-decoration: none;
+                    box-shadow:
+                            0 3px 6px rgba(0,0,0, 0.12),
+                            0 3px 6px rgba(0,0,0, 0.24);
+
+                    -webkit-transform: scale(1.2);
+                    -moz-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    -o-transform: scale(1.2);
+                    transform: scale(1.2);
+                  }
+
+                  .icon {
+                    color: @green;
+                  }
+                }
+
+              }
+
+              .description-box {
+                padding: 8px;
+
+                .plugin-name {
+                  margin: 5px 0;
+                  font-size: 18px;
+                }
+              }
+
+              .about-makers {
+                padding: 8px;
+              }
+            }
           }
         }
       }
