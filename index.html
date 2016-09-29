@@ -11,16 +11,16 @@
 <div class="top_navigation">
     <div class="container">
         <div class="row">
-            <div class="col-xs-3">
+            <div class="col-lg-2">
                 <label class="sr-only" for="searchbox">Search</label>
                 <input type="text" class="form-control" id="searchbox" placeholder="Search &hellip;" autocomplete="off">
                 <span class="glyphicon glyphicon-search search-icon"></span>
             </div>
-            <div class="col-xs-9">
+            <div class="col-lg-10">
                 <div class="row">
-                    <div class="content col-xs-12">
-                        <div id="pagination" class="movies-pagination col-xs-9"></div>
-                        <div class="col-xs-3 content">
+                    <div class="content col-lg-12">
+                        <div id="pagination" class="movies-pagination col-lg-9"></div>
+                        <div class="col-lg-3 content">
                             Per Page: <span id="per_page" class="content"></span>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
 <main class="filter">
     <div class="container">
         <div class="row">
-            <div class="sidebar col-xs-3">
+            <div class="sidebar col-lg-2">
                 <div class="well">
                     <fieldset id="year_criteria">
                         <legend>Year</legend>
@@ -50,116 +50,18 @@
                             <option value="2011-2020">2011 - 2020</option>
                         </select>
                     </fieldset>
-                </div>
-                <div class="well">
-                    <fieldset id="genre_criteria">
-                        <legend>Genre</legend>
+                    <fieldset id="plugin-seciton_criteria">
+                        <legend>Plugins</legend>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="All" id="all_genre">
+                                <input type="checkbox" value="All" id="all_plugin-seciton">
                                 <span>All</span>
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="Crime">
-                                <span>Crime<span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Drama">
-                                <span>Drama</span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Thriller">
-                                <span>Thriller</span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Adventure">
-                                <span> Adventure </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Western">
-                                <span> Western </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Action">
-                                <span> Action </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Biography">
-                                <span> Biography </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="History">
-                                <span> History </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="War">
-                                <span/>War</span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Fantasy">
-                                <span>Fantasy</span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Sci-Fi">
-                                <span>Sci-Fi</span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Mystery">
-                                <span>Mystery</span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Romance">
-                                <span>Romance </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Family">
-                                <span> Family </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Horror">
-                                <span> Horror </span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Film-Noir">
-                                <span>Film-Noir</span>
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Comedy">
-                                <span>Comedy</span>
+                                <input type="checkbox" value="Library">
+                                <span>Library</span>
                             </label>
                         </div>
                         <div class="checkbox">
@@ -170,65 +72,79 @@
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="Musical">
-                                <span>Musical</span>
+                                <input type="checkbox" value="Grid">
+                                <span>Grid</span>
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="Music">
-                                <span>Music</span>
+                                <input type="checkbox" value="Generator">
+                                <span> Online generators </span>
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="Sport">
-                                <span>Sport</span>
+                                <input type="checkbox" value="Map">
+                                <span> Map </span>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="Icons">
+                                <span> Icons </span>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="Forms">
+                                <span> Form </span>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="Popup">
+                                <span> Popup </span>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="History">
+                                <span> Slider </span>
                             </label>
                         </div>
                     </fieldset>
                 </div>
             </div>
-            <div class="col-xs-9">
+            <div class="col-lg-10">
                 <div class="movies row" id="movies"></div>
             </div>
         </div>
     </div>
 </main>
 <script id="movie-template" type="text/html">
-    <div class="col-xs-3 movie">
+    <div class="col-lg-2 movie">
         <div class="thumbnail">
-            <span class="label label-success rating"><%= rating %>
-            <i class="glyphicon glyphicon-star"></i>
-          </span>
             <div class="caption">
-                <h4><%= _fid %>. <%= name %></h4>
-                <div class="outline">
-                    <%= outline %>
-                    <span class="runtime">
-                <i class="glyphicon glyphicon-time"></i>
-                <%= runtime %> mins.
-              </span>
+                <div class="image">
+                    <img class="plugin-pic" src="./site/assets/plugins/<%= img %>" alt="">
+                    <a href="<%= file %>" class="download" title="Download <%= name %>" download>
+                        <span class="icon icon-box-add"></span>
+                    </a>
                 </div>
-                <div class="detail">
-                    <dl>
-                        <dt>Director</dt>
-                        <dd><%= director %></dd>
-                        <dt>Actors</dt>
-                        <dd><%= stars %>
-                        </dt>
-                        <dt>Year</dt>
-                        <dd><%= year %></dd>
-                    </dl>
+
+                <div class="description-box">
+                    <h1 class="plugin-name"> <%= name %> <%= version %> </h1>
                 </div>
+
+                <div class="about-makers">By <a target="_blank" href="<%= link %>"><%= name %></a></div>
             </div>
         </div>
     </div>
 </script>
-<script id="genre_template" type="text/html">
+<script id="plugin-seciton_template" type="text/html">
     <div class="checkbox">
         <label>
-            <input type="checkbox" value="<%= genre %>"> <%= genre %>
+            <input type="checkbox" value="<%= plugin-seciton %>"> <%= plugin-seciton %>
         </label>
     </div>
 </script>

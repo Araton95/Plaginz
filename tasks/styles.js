@@ -13,8 +13,9 @@ var production = require('../gulpfile');
 gulp.task('styles', function () {
 	return gulp.src([
 		'site/src/css/reset.css',
-		'site/src/css/style.css',
-		'site/src/css/*.css',
+		'site/src/css/bootstrap.min.css',
+		'site/src/css/jquery.ui.css',
+		'site/src/css/font.less',
 		'site/src/css/style.less'
 	])
 		.pipe(plumber({
