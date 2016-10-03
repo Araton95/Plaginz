@@ -1,7 +1,12 @@
 @baseblue : #33b5e5;
+@blue : #094074;
+@bluesecond : #3C6997;
+@yellow : #FFDD4A;
+@orange : #FFBC42;
 @red : #ff4444;
-@header : #34495e;
+@pink : #D81159;
 @green : #0f9d58;
+@header : #34495e;
 @white : #fff;
 @ligthgray : #e7e7e7;
 
@@ -30,7 +35,7 @@ body {
 
     .container {
       .row {
-        .col-lg-2 {
+        .search-area {
           padding: 0;
           height: 34px;
 
@@ -39,7 +44,7 @@ body {
           }
         }
 
-        .col-lg-10 {
+        .pagination-area {
           height: 34px;
           .content {
             margin-top: 0;
@@ -77,76 +82,84 @@ body {
             }
           }
 
-        .col-lg-10 {
+        .cards {
           max-width: 1440px;
           padding: 10px 50px 0 50px;
 
-          .thumbnail {
+          .card {
             padding: 0;
+            display: inline-block;
+            margin:0 20px 20px 0;
             .card-shadow;
-            height: 285px;
+            width: 220px;
+            height: 280px;
 
-            .caption {
-              position: relative;
-              padding: 0;
+            .thumbnail {
+              height: 100%;
 
-              .image {
+              .caption {
                 position: relative;
+                padding: 0;
 
-                .plugin-pic {
-                  width: 100%;
-                }
+                .image {
+                  position: relative;
 
-                .download {
-                  position: absolute;
-                  bottom: -18px;
-                  right: 3px;
-                  width: 40px;
-                  height: 40px;
-                  line-height: 40px;
-                  text-align: center;
-                  border-radius: 50%;
-                  background-color: #fff;
-                  transition: all 0.3s ease;
-                  outline: 0;
-                  box-shadow:
-                          0 2px 4px rgba(0,0,0, 0.12),
-                          0 2px 4px rgba(0,0,0, 0.24);
+                  .plugin-pic {
+                    width: 100%;
+                  }
 
-                  &:hover,&:focus {
-                    text-decoration: none;
+                  .download {
+                    position: absolute;
+                    bottom: -18px;
+                    right: 3px;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    transition: all 0.3s ease;
+                    outline: 0;
                     box-shadow:
-                            0 3px 6px rgba(0,0,0, 0.12),
-                            0 3px 6px rgba(0,0,0, 0.24);
+                            0 2px 4px rgba(0,0,0, 0.12),
+                            0 2px 4px rgba(0,0,0, 0.24);
 
-                    -webkit-transform: scale(1.2);
-                    -moz-transform: scale(1.2);
-                    -ms-transform: scale(1.2);
-                    -o-transform: scale(1.2);
-                    transform: scale(1.2);
+                    &:hover,&:focus {
+                      text-decoration: none;
+                      box-shadow:
+                              0 3px 6px rgba(0,0,0, 0.12),
+                              0 3px 6px rgba(0,0,0, 0.24);
+
+                      -webkit-transform: scale(1.2);
+                      -moz-transform: scale(1.2);
+                      -ms-transform: scale(1.2);
+                      -o-transform: scale(1.2);
+                      transform: scale(1.2);
+                    }
+
+                    .icon {
+                      color: @green;
+                    }
                   }
 
-                  .icon {
-                    color: @green;
+                }
+
+                .description-box {
+                  padding: 8px;
+
+                  .plugin-name {
+                    margin: 5px 0;
+                    font-size: 18px;
                   }
                 }
 
-              }
-
-              .description-box {
-                padding: 8px;
-
-                .plugin-name {
-                  margin: 5px 0;
-                  font-size: 18px;
+                .about-makers {
+                  padding: 8px;
                 }
-              }
-
-              .about-makers {
-                padding: 8px;
               }
             }
           }
+
         }
       }
     }

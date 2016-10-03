@@ -8625,20 +8625,20 @@ body .top_navigation {
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-body .top_navigation .container .row .col-lg-2 {
+body .top_navigation .container .row .search-area {
   padding: 0;
   height: 34px;
 }
-body .top_navigation .container .row .col-lg-2:focus {
+body .top_navigation .container .row .search-area:focus {
   border: 1px solid #33b5e5;
 }
-body .top_navigation .container .row .col-lg-10 {
+body .top_navigation .container .row .pagination-area {
   height: 34px;
 }
-body .top_navigation .container .row .col-lg-10 .content {
+body .top_navigation .container .row .pagination-area .content {
   margin-top: 0;
 }
-body .top_navigation .container .row .col-lg-10 .content .pagination {
+body .top_navigation .container .row .pagination-area .content .pagination {
   padding: 0;
   margin: 0;
 }
@@ -8661,26 +8661,32 @@ body .filter .container .row .sidebar .well {
   margin: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-body .filter .container .row .col-lg-10 {
+body .filter .container .row .cards {
   max-width: 1440px;
   padding: 10px 50px 0 50px;
 }
-body .filter .container .row .col-lg-10 .thumbnail {
+body .filter .container .row .cards .card {
   padding: 0;
+  display: inline-block;
+  margin: 0 20px 20px 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  height: 285px;
+  width: 220px;
+  height: 280px;
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption {
+body .filter .container .row .cards .card .thumbnail {
+  height: 100%;
+}
+body .filter .container .row .cards .card .thumbnail .caption {
   position: relative;
   padding: 0;
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption .image {
+body .filter .container .row .cards .card .thumbnail .caption .image {
   position: relative;
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption .image .plugin-pic {
+body .filter .container .row .cards .card .thumbnail .caption .image .plugin-pic {
   width: 100%;
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption .image .download {
+body .filter .container .row .cards .card .thumbnail .caption .image .download {
   position: absolute;
   bottom: -18px;
   right: 3px;
@@ -8694,22 +8700,22 @@ body .filter .container .row .col-lg-10 .thumbnail .caption .image .download {
   outline: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption .image .download:hover,
-body .filter .container .row .col-lg-10 .thumbnail .caption .image .download:focus {
+body .filter .container .row .cards .card .thumbnail .caption .image .download:hover,
+body .filter .container .row .cards .card .thumbnail .caption .image .download:focus {
   text-decoration: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
   transform: scale(1.2);
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption .image .download .icon {
+body .filter .container .row .cards .card .thumbnail .caption .image .download .icon {
   color: #0f9d58;
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption .description-box {
+body .filter .container .row .cards .card .thumbnail .caption .description-box {
   padding: 8px;
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption .description-box .plugin-name {
+body .filter .container .row .cards .card .thumbnail .caption .description-box .plugin-name {
   margin: 5px 0;
   font-size: 18px;
 }
-body .filter .container .row .col-lg-10 .thumbnail .caption .about-makers {
+body .filter .container .row .cards .card .thumbnail .caption .about-makers {
   padding: 8px;
 }

@@ -1727,6 +1727,40 @@ y+="</select>"}if(_||(b+=y+(!a&&g&&v?"":"&#xa0;")),!t.yearshtml)if(t.yearshtml="
 
 })( jQuery, window , document );
 ;
+// All
+// 3D
+// Animations
+// Autocomplete
+// Buttons
+// Canvas
+// CSS
+// Datepicker
+// Dom
+// Forms
+// Gallery
+// Generators
+// Graphics
+// Grid
+// Hover
+// Html
+// Icons
+// Javascript
+// Jquery
+// Loader
+// Menu
+// Parallax
+// Popup
+// Scroll
+// Select
+// Slider
+// Sortable
+// SVG
+// Tabs
+// Tooltips
+// Validation
+// Zoom
+
+
 var movies = [
   {
     "name": "Bootstrap",
@@ -1742,279 +1776,6 @@ var movies = [
        "Forms"
     ]
   },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-    "file": "Jquery/jquery-3.1.1.min.js",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  },
-  {
-    "name": "Bootstrap",
-    "version": "3.0",
-    "description": "Bootstrap is css open source library",
-    "link": "http://getbootstrap.com/",
-    "img": "Bootstrap/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Grid",
-      "Popup",
-      "Forms"
-    ]
-  },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation"
-    ]
-  }
 ]
 ;
 $(document).ready(function(){

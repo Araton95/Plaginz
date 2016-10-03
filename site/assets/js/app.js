@@ -1734,7 +1734,7 @@ var movies = [
     "description": "Bootstrap is css open source library",
     "link": "http://getbootstrap.com/",
     "img": "Bootstrap/logo.png",
-
+    "file": "Bootstrap/logo.png",
     "plugin-seciton": [
       "Library",
       "Grid",
@@ -1742,18 +1742,6 @@ var movies = [
        "Forms"
     ]
   },
-  {
-    "name": "jQuery",
-    "version": "3.1.1",
-    "description": "",
-    "link": "https://jquery.com",
-    "img": "Jquery/logo.png",
-
-    "plugin-seciton": [
-      "Library",
-      "Animation",
-    ]
-  }
 ]
 ;
 $(document).ready(function(){
