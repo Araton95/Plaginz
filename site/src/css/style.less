@@ -1,30 +1,40 @@
-@baseblue: #33b5e5;
-@blue: #094074;
+@blue: #3b5998;
 @bluesecond: #3C6997;
 @yellow: #FFDD4A;
 @orange: #FFBC42;
 @red: #ff4444;
 @pink: #D81159;
 @green: #0f9d58;
-@header: #34495e;
 @white: #fff;
-@ligthgray: #e7e7e7;
+@lightgray: #f6f7f9;
+@gray: #e9ebee;
 
 .card-shadow {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.container {
+  margin: 0;
+  width: 100%;
 }
 
 body {
   font-family: 'MyriadProRegular';
 
   .header {
-    background-color: @baseblue;
+    background-color: @blue;
     text-align: left;
-    padding: 5px 25px;
+    padding: 2px 0;
 
-    img {
-      width: 150px;
+    .container {
+      .row {
+        img {
+          margin-left: 11px;
+          width: 117px;
+        }
+      }
     }
+
   }
 
   .top_navigation {
@@ -32,21 +42,20 @@ body {
     .card-shadow;
 
     .container {
-      width: 100%;
-      margin: 0 15px;
-
       .row {
         .search-area {
           padding: 0;
           height: 34px;
-          max-width: 266px;
+          margin-left: 15px;
+          width: 246px;
 
           &:focus {
-            border: 1px solid @baseblue;
+            border: 1px solid @blue;
           }
         }
 
         .pagination-area {
+          width: calc(~"100% - 261px");
           height: 34px;
           .content {
             margin-top: 0;
@@ -54,6 +63,13 @@ body {
             .pagination {
               padding: 0;
               margin: 0;
+
+              li {
+                a {
+                  transition: all 250ms;
+                  cursor: pointer;
+                }
+              }
             }
           }
         }
@@ -66,30 +82,34 @@ body {
   }
 
   .filter {
-    background-color: @ligthgray;
+    background-color: @gray;
 
     .container {
-      width: 100%;
-
       .row {
         .sidebar {
-          max-width: 280px;
+          height: calc(~"100vh - 124px");
+          overflow-y: auto;
+          overflow-x: hidden;
+          width: 260px;
           position: relative;
           padding: 0;
           .card-shadow;
+          background-color: @white;
 
           .well {
-            height: calc(~"100vh - 124px");
             border: none;
             padding: 0;
             width: 100%;
             margin: 0;
 
             #plugin-seciton_criteria {
+              width: 260px;
+
               legend {
                 font-family: 'MyriadProBold';
                 padding: 10px 0 0 15px;
                 border: none;
+                color: @blue;
               }
 
               .checkbox {
@@ -103,7 +123,7 @@ body {
                     visibility: hidden;
 
                     &:checked + span {
-                      background-color: @baseblue;
+                      background-color: @gray;
                       padding-left: 20px;
                     }
                   }
@@ -113,12 +133,13 @@ body {
                     display: block;
                     background-color: @white;
                     transition: all 150ms cubic-bezier(0.85, -0.02, 0.36, 1);
-                    font-size: 18px;
+                    font-size: 16px;
+                    color: @blue;
                   }
 
                   &:hover {
                     span {
-                      background-color: @ligthgray;
+                      background-color: @lightgray;
                       padding-left: 20px;
                     }
                   }
@@ -129,8 +150,8 @@ body {
         }
 
         .cards {
-          max-width: 1440px;
-          padding: 10px 50px 0 50px;
+          width: calc(~"100% - 310px");
+          margin: 20px 25px;
 
           .card {
             padding: 0;
@@ -142,6 +163,8 @@ body {
 
             .thumbnail {
               height: 100%;
+              padding: 0;
+              border: none;
 
               .caption {
                 position: relative;
@@ -149,21 +172,27 @@ body {
 
                 .image {
                   position: relative;
+                  .overflow {
+                    height: 165px;
+                    overflow: hidden;
+                    background-color: #1e1e1e;
 
-                  .plugin-pic {
-                    width: 100%;
+                    .plugin-pic {
+                      width: 100%;
+                    }
                   }
 
-                  .download {
+                  .download,
+                  .demo {
+                    background-color: @orange;
                     position: absolute;
-                    bottom: -18px;
+                    bottom: -14px;
                     right: 3px;
-                    width: 40px;
-                    height: 40px;
-                    line-height: 40px;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
                     text-align: center;
                     border-radius: 50%;
-                    background-color: #fff;
                     transition: all 0.3s ease;
                     outline: 0;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
@@ -182,23 +211,40 @@ body {
                     }
 
                     .icon {
-                      color: @green;
+                      color: @white;
                     }
                   }
 
-                }
-
-                .description-box {
-                  padding: 8px;
-
-                  .plugin-name {
-                    margin: 5px 0;
-                    font-size: 18px;
+                  .demo {
+                    right: 53px;
+                    background-color: @red;
                   }
                 }
+              }
 
-                .about-makers {
-                  padding: 8px;
+              .description-box {
+                padding: 8px;
+
+                .name {
+                  margin: 20px 0 5px 0;
+                  font-size: 20px;
+                }
+              }
+
+              .about-makers {
+                padding: 8px;
+
+                a {
+                  .icon {
+                    color: @blue;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                    font-size: 18px;
+                  }
+
+                  &:hover {
+                      text-decoration: none;
+                  }
                 }
               }
             }

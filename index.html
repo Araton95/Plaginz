@@ -7,7 +7,11 @@
 <body>
 
 <header class="header">
-    <a href="#"><img src="./site/src/images/logo/pl.white.png" alt=""></a>
+    <div class="container">
+        <div class="row">
+            <a href="#"><img src="./site/src/images/logo/pl.white.png" alt=""></a>
+        </div>
+    </div>
 </header>
 
 <div class="top_navigation">
@@ -20,8 +24,8 @@
             <div class="pagination-area col-lg-10">
                 <div class="row">
                     <div class="content col-lg-12">
-                        <div id="pagination" class="movies-pagination col-lg-9"></div>
-                        <div class="col-lg-3 content">
+                        <div id="pagination" class="movies-pagination col-lg-10"></div>
+                        <div class="col-lg-2 content">
                             Per Page: <span id="per_page" class="content"></span>
                         </div>
                     </div>
@@ -37,20 +41,20 @@
             <div class="sidebar col-lg-2">
                 <div class="well">
                     <!--<fieldset id="year_criteria">-->
-                        <!--<legend>Year</legend>-->
-                        <!--<select class="form-control" id="year_filter">-->
-                            <!--<option value="all">All (1920 - 2020)</option>-->
-                            <!--<option value="1920-1930">1920 - 1930</option>-->
-                            <!--<option value="1931-1940">1931 - 1940</option>-->
-                            <!--<option value="1941-1950">1941 - 1950</option>-->
-                            <!--<option value="1951-1960">1951 - 1960</option>-->
-                            <!--<option value="1961-1970">1961 - 1970</option>-->
-                            <!--<option value="1971-1980">1971 - 1980</option>-->
-                            <!--<option value="1981-1990">1981 - 1990</option>-->
-                            <!--<option value="1991-2000">1991 - 2000</option>-->
-                            <!--<option value="2001-2010">2001 - 2010</option>-->
-                            <!--<option value="2011-2020">2011 - 2020</option>-->
-                        <!--</select>-->
+                    <!--<legend>Year</legend>-->
+                    <!--<select class="form-control" id="year_filter">-->
+                    <!--<option value="all">All (1920 - 2020)</option>-->
+                    <!--<option value="1920-1930">1920 - 1930</option>-->
+                    <!--<option value="1931-1940">1931 - 1940</option>-->
+                    <!--<option value="1941-1950">1941 - 1950</option>-->
+                    <!--<option value="1951-1960">1951 - 1960</option>-->
+                    <!--<option value="1961-1970">1961 - 1970</option>-->
+                    <!--<option value="1971-1980">1971 - 1980</option>-->
+                    <!--<option value="1981-1990">1981 - 1990</option>-->
+                    <!--<option value="1991-2000">1991 - 2000</option>-->
+                    <!--<option value="2001-2010">2001 - 2010</option>-->
+                    <!--<option value="2011-2020">2011 - 2020</option>-->
+                    <!--</select>-->
                     <!--</fieldset>-->
                     <fieldset id="plugin-seciton_criteria">
                         <legend>Plugins</legend>
@@ -176,6 +180,12 @@
                         </div>
                         <div class="checkbox">
                             <label>
+                                <input type="checkbox" value="Map">
+                                <span> Maps </span>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
                                 <input type="checkbox" value="Menu">
                                 <span> Menu </span>
                             </label>
@@ -262,17 +272,26 @@
         <div class="thumbnail">
             <div class="caption">
                 <div class="image">
-                    <img class="plugin-pic" src="./site/assets/plugins/<%= img %>" alt="">
-                    <a href="<%= file %>" class="download" title="Download <%= name %>" download>
+                    <div class="overflow">
+                        <img class="plugin-pic" src="./site/logo/<%= img %>" alt="">
+                    </div>
+
+                    <a href="<%= demo %>" class="demo" target="_blank" title="Demo">
+                        <span class="icon icon-external-link-square"></span>
+                    </a>
+
+                    <a href="<%= download %>" class="download" title="Download" download>
                         <span class="icon icon-box-add"></span>
                     </a>
                 </div>
 
                 <div class="description-box">
-                    <h1 class="plugin-name"> <%= name %> <%= version %> </h1>
+                    <h1 class="name"> <%= name %> </h1>
                 </div>
 
-                <div class="about-makers">By <a target="_blank" href="<%= link %>"><%= name %></a></div>
+                <div class="about-makers"><a target="_blank" href="<%= plugin %>"
+                                             title="<%= name %> documentation"><span class="icon icon-earth"></span> <%=
+                    name %></a></div>
             </div>
         </div>
     </div>
