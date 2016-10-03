@@ -1,43 +1,45 @@
-@baseblue : #33b5e5;
-@blue : #094074;
-@bluesecond : #3C6997;
-@yellow : #FFDD4A;
-@orange : #FFBC42;
-@red : #ff4444;
-@pink : #D81159;
-@green : #0f9d58;
-@header : #34495e;
-@white : #fff;
-@ligthgray : #e7e7e7;
+@baseblue: #33b5e5;
+@blue: #094074;
+@bluesecond: #3C6997;
+@yellow: #FFDD4A;
+@orange: #FFBC42;
+@red: #ff4444;
+@pink: #D81159;
+@green: #0f9d58;
+@header: #34495e;
+@white: #fff;
+@ligthgray: #e7e7e7;
 
 .card-shadow {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-.container {
-  width: 98vw;
-}
 
 body {
+  font-family: 'MyriadProRegular';
+
   .header {
     background-color: @baseblue;
-    text-align: center;
+    text-align: left;
+    padding: 5px 25px;
 
-    h1 {
-      color: @white;
-      margin: 0;
+    img {
+      width: 150px;
     }
   }
 
   .top_navigation {
-    width: 100%;
     background-color: @white;
     .card-shadow;
 
     .container {
+      width: 100%;
+      margin: 0 15px;
+
       .row {
         .search-area {
           padding: 0;
           height: 34px;
+          max-width: 266px;
 
           &:focus {
             border: 1px solid @baseblue;
@@ -67,20 +69,64 @@ body {
     background-color: @ligthgray;
 
     .container {
-      width: 100vw;
+      width: 100%;
 
       .row {
         .sidebar {
-            position: relative;
-            padding: 0;
+          max-width: 280px;
+          position: relative;
+          padding: 0;
+          .card-shadow;
 
-            .well {
-              border-radius: 2px;
-              width: 99%;
-              margin:0;
-              .card-shadow;
+          .well {
+            height: calc(~"100vh - 124px");
+            border: none;
+            padding: 0;
+            width: 100%;
+            margin: 0;
+
+            #plugin-seciton_criteria {
+              legend {
+                font-family: 'MyriadProBold';
+                padding: 10px 0 0 15px;
+                border: none;
+              }
+
+              .checkbox {
+                margin: 0;
+
+                label {
+                  width: 100%;
+                  padding: 0;
+
+                  input[type=checkbox] {
+                    visibility: hidden;
+
+                    &:checked + span {
+                      background-color: @baseblue;
+                      padding-left: 20px;
+                    }
+                  }
+
+                  span {
+                    padding: 8px 0 8px 15px;
+                    display: block;
+                    background-color: @white;
+                    transition: all 150ms cubic-bezier(0.85, -0.02, 0.36, 1);
+                    font-size: 18px;
+                  }
+
+                  &:hover {
+                    span {
+                      background-color: @ligthgray;
+                      padding-left: 20px;
+                    }
+                  }
+                }
+              }
             }
           }
+        }
 
         .cards {
           max-width: 1440px;
@@ -89,7 +135,7 @@ body {
           .card {
             padding: 0;
             display: inline-block;
-            margin:0 20px 20px 0;
+            margin: 0 20px 20px 0;
             .card-shadow;
             width: 220px;
             height: 280px;
@@ -120,15 +166,13 @@ body {
                     background-color: #fff;
                     transition: all 0.3s ease;
                     outline: 0;
-                    box-shadow:
-                            0 2px 4px rgba(0,0,0, 0.12),
-                            0 2px 4px rgba(0,0,0, 0.24);
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                    0 2px 4px rgba(0, 0, 0, 0.24);
 
-                    &:hover,&:focus {
+                    &:hover, &:focus {
                       text-decoration: none;
-                      box-shadow:
-                              0 3px 6px rgba(0,0,0, 0.12),
-                              0 3px 6px rgba(0,0,0, 0.24);
+                      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12),
+                      0 3px 6px rgba(0, 0, 0, 0.24);
 
                       -webkit-transform: scale(1.2);
                       -moz-transform: scale(1.2);
@@ -159,7 +203,6 @@ body {
               }
             }
           }
-
         }
       }
     }

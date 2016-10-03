@@ -18,6 +18,17 @@ $(document).ready(function(){
       if(result.length > 0){
         count = jQ.where({ 'plugin-seciton': c.val() }).count;
       }
+
+      console.log(result.length);
+
+      if(count === 0) {
+        c.parent().css('pointer-events','none');
+        c.siblings().css('color','#c5c5c5');
+      }else {
+        c.parent().css('pointer-events','all');
+        c.siblings().css('color','#34495e');
+      }
+
       c.next().text(c.val() + '(' + count + ')')
     });
   }
@@ -102,7 +113,7 @@ function initSliders(){
     }
   });
 
-  $('#plugin-seciton_criteria :checkbox').prop('checked', true);
+  $('#plugin-seciton_criteria :checkbox').prop('checked', false);
   $('#all_plugin-seciton').on('click', function(){
     $('#plugin-seciton_criteria :checkbox').prop('checked', $(this).is(':checked'));
   });
