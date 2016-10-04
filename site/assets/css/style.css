@@ -6921,6 +6921,103 @@ button.close {
     display: none !important;
   }
 }
+.material-design-hamburger button {
+  padding: 14px 10px;
+  display: block;
+  border: none;
+  background: none;
+  outline: 0;
+}
+.material-design-hamburger__icon {
+  padding: 3rem 1rem;
+  cursor: pointer;
+}
+.material-design-hamburger__layer {
+  display: block;
+  width: 40px;
+  height: 6px;
+  background: #eee;
+  position: relative;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+.material-design-hamburger__layer:before,
+.material-design-hamburger__layer:after {
+  display: block;
+  width: inherit;
+  height: 6px;
+  position: absolute;
+  background: inherit;
+  left: 0;
+  content: '';
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+.material-design-hamburger__layer:before {
+  bottom: 200%;
+}
+.material-design-hamburger__layer:after {
+  top: 200%;
+}
+.material-design-hamburger__icon--to-arrow {
+  animation-name: material-design-hamburger__icon--slide;
+  animation-fill-mode: forwards;
+}
+.material-design-hamburger__icon--to-arrow:before {
+  animation-name: material-design-hamburger__icon--slide-before;
+  animation-fill-mode: forwards;
+}
+.material-design-hamburger__icon--to-arrow:after {
+  animation-name: material-design-hamburger__icon--slide-after;
+  animation-fill-mode: forwards;
+}
+.material-design-hamburger__icon--from-arrow {
+  animation-name: material-design-hamburger__icon--slide-from;
+}
+.material-design-hamburger__icon--from-arrow:before {
+  animation-name: material-design-hamburger__icon--slide-before-from;
+}
+.material-design-hamburger__icon--from-arrow:after {
+  animation-name: material-design-hamburger__icon--slide-after-from;
+}
+@keyframes material-design-hamburger__icon--slide {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes material-design-hamburger__icon--slide-before {
+  100% {
+    transform: rotate(45deg);
+    margin: 2% 28%;
+    width: 100%;
+  }
+}
+@keyframes material-design-hamburger__icon--slide-after {
+  100% {
+    transform: rotate(-45deg);
+    margin: 2% 29%;
+    width: 100%;
+  }
+}
+@keyframes material-design-hamburger__icon--slide-from {
+  0% {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes material-design-hamburger__icon--slide-before-from {
+  0% {
+    transform: rotate(45deg);
+    margin: 3% 37%;
+    width: 75%;
+  }
+}
+@keyframes material-design-hamburger__icon--slide-after-from {
+  0% {
+    transform: rotate(-45deg);
+    margin: 3% 37%;
+    width: 75%;
+  }
+}
 
 /*! jQuery UI - v1.10.2 - 2013-03-20
 * http://jqueryui.com
@@ -8685,6 +8782,10 @@ body .top_navigation {
   top: 43px;
   width: 100%;
 }
+body .top_navigation .container .row .material-design-hamburger {
+  float: left;
+  display: none;
+}
 body .top_navigation .container .row .search-area {
   padding: 0;
   height: 34px;
@@ -8708,6 +8809,9 @@ body .top_navigation .container .row .pagination-area .content .pagination {
 body .top_navigation .container .row .pagination-area .content .pagination li a {
   transition: all 250ms;
   cursor: pointer;
+}
+body .top_navigation .container .row .pagination-area .content .col-lg-2 {
+  text-align: right;
 }
 body .top_navigation .container > .row {
   padding: 15px 0;
@@ -8853,4 +8957,34 @@ body .filter .container .row .cards .card .thumbnail .about-makers a .icon {
 }
 body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
   text-decoration: none;
+}
+@media (max-width: 1287px) {
+  body .top_navigation .container .row .search-area {
+    width: 186px;
+  }
+  body .filter .container .row .sidebar {
+    width: 200px;
+  }
+  body .filter .container .row .sidebar .well #plugin-seciton_criteria {
+    width: 200px;
+  }
+  body .filter .container .row .cards {
+    width: calc(100% - 225px);
+    margin: 20px 25px 20px 225px;
+  }
+}
+@media (max-width: 768px) {
+  body .top_navigation .container .row .material-design-hamburger {
+    display: block;
+  }
+  body .top_navigation .container .row .pagination-area .row .content .col-lg-2 {
+    display: none;
+  }
+  body .filter .container .row .sidebar {
+    width: 200px;
+  }
+  body .filter .container .row .cards {
+    width: 100%;
+    margin: 20px 0 20px 0;
+  }
 }
