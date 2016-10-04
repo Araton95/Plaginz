@@ -8708,7 +8708,7 @@ body .filter {
   background-color: #e9ebee;
 }
 body .filter .container .row .sidebar {
-  height: calc(100vh - 124px);
+  height: calc(100vh - 107px);
   overflow-y: auto;
   overflow-x: hidden;
   width: 260px;

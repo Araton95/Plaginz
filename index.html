@@ -72,7 +72,7 @@
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="Animations">
+                                <input type="checkbox" value="Animation">
                                 <span>Animations</span>
                             </label>
                         </div>
@@ -181,7 +181,7 @@
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" value="Map">
-                                <span> Maps </span>
+                                <span> Map </span>
                             </label>
                         </div>
                         <div class="checkbox">
@@ -289,9 +289,11 @@
                     <h1 class="name"> <%= name %> </h1>
                 </div>
 
-                <div class="about-makers"><a target="_blank" href="<%= plugin %>"
-                                             title="<%= name %> documentation"><span class="icon icon-earth"></span> <%=
-                    name %></a></div>
+                <div class="about-makers">
+                    <a target="_blank" href="<%= docs %>" title="<%= name %> documentation">
+                       <span class="icon icon-earth"></span> <%= name %>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -299,7 +301,7 @@
 <script id="plugin-seciton_template" type="text/html">
     <div class="checkbox">
         <label>
-            <input type="checkbox" value="<%= plugin-seciton %>"> <%= plugin-seciton %>
+            <input type="checkbox" value="<%= pluginType %>"> <%= pluginType %>
         </label>
     </div>
 </script>
