@@ -8680,7 +8680,6 @@ input:hover {
 }
 .movies-pagination li.active a {
   background-color: #3b5998;
-  border: none;
 }
 .map {
   margin-top: 15px;

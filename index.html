@@ -313,6 +313,7 @@
                     <div class="overflow">
                         <img class="plugin-pic"  src="./site/logo/<%= img %>" alt=""
                              onError="
+                             this.onerror=null;
                              this.parentElement.className += ' no-image';
                              this.remove();
                          ">

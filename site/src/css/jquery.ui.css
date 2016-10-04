@@ -251,7 +251,6 @@ select:hover, textarea:hover, input:hover{
 
 .movies-pagination li.active a{
     background-color: #3b5998;
-    border: none;
 }
 
 .map{
