@@ -51,6 +51,11 @@ body {
 
     .container {
       .row {
+        .material-design-hamburger {
+          float: left;
+          display: none;
+        }
+
         .search-area {
           padding: 0;
           height: 34px;
@@ -78,6 +83,10 @@ body {
                   cursor: pointer;
                 }
               }
+            }
+
+            .col-lg-2 {
+              text-align: right;
             }
           }
         }
@@ -253,11 +262,85 @@ body {
                   }
 
                   &:hover {
-                      text-decoration: none;
+                    text-decoration: none;
                   }
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1287px) {
+  body {
+    .top_navigation {
+      .container {
+        .row {
+          .search-area {
+            width: 186px;
+          }
+        }
+      }
+    }
+
+    .filter {
+      .container {
+        .row {
+          .sidebar {
+            width: 200px;
+
+            .well {
+              #plugin-seciton_criteria {
+                width: 200px;
+              }
+            }
+          }
+
+          .cards {
+            width: calc(~"100% - 225px");
+            margin: 20px 25px 20px 225px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .top_navigation {
+      .container {
+        .row {
+          .material-design-hamburger {
+            display: block;
+          }
+
+          .pagination-area {
+            .row {
+              .content {
+                .col-lg-2 {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .filter {
+      .container {
+        .row {
+          .sidebar {
+            width: 200px;
+          }
+
+          .cards {
+            width: 100%;
+            margin: 20px 0 20px 0;
           }
         }
       }

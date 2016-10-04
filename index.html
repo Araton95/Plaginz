@@ -17,15 +17,22 @@
 <div class="top_navigation">
     <div class="container">
         <div class="row">
-            <div class="search-area col-lg-2">
+            <section class="material-design-hamburger">
+                <button class="material-design-hamburger__icon">
+                    <span class="material-design-hamburger__layer"></span>
+                </button>
+            </section>
+
+            <div class="search-area col-sm-3 col-md-2 col-lg-2">
                 <input type="text" class="form-control" id="searchbox" placeholder="Search &hellip;" autocomplete="off">
                 <span class="glyphicon glyphicon-search search-icon"></span>
             </div>
-            <div class="pagination-area col-lg-10">
+
+            <div class="pagination-area col-sm-9 col-md-10 col-lg-10">
                 <div class="row">
-                    <div class="content col-lg-12">
-                        <div id="pagination" class="movies-pagination col-lg-10"></div>
-                        <div class="col-lg-2 content">
+                    <div class="content col-sm-12 col-md-12 col-lg-12">
+                        <div id="pagination" class="movies-pagination col-sm-9 col-md-9 col-lg-10"></div>
+                        <div class="col-sm-3 col-md-3 col-lg-2">
                             Per Page: <span id="per_page" class="content"></span>
                         </div>
                     </div>
