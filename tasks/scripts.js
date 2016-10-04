@@ -12,41 +12,38 @@ var production = require('../gulpfile');
 gulp.task('scripts', ['scripts.app', 'scripts.vendor']);
 
 gulp.task('scripts.app', function () {
-	return gulp.src([
-		'site/src/js/Vendor/jquery-1.11.3.min.js',
-		'site/src/js/Vendor/*.js',
-		'site/src/js/main.js'
-	])
-		.pipe(plumber({
-			handleError: function (err) {
-				console.log(err);
-				this.emit('end');
-			}
-		}))
-		.pipe(cache('scripts'))
-		.pipe(sourcemaps.init())
-		.pipe(remember('scripts'))
-		.pipe(concat('app.js', { newLine: ';\n' }))
-		.pipe(gulpif(production, uglify()))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('site/assets/js/'));
+    return gulp.src([
+        'site/src/js/Vendor/jquery-1.11.3.min.js',
+        'site/src/js/main.js'
+    ])
+        .pipe(plumber({
+            handleError: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(cache('scripts'))
+        .pipe(sourcemaps.init())
+        .pipe(remember('scripts'))
+        .pipe(concat('app.js', {newLine: ';\n'}))
+        .pipe(gulpif(production, uglify()))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('site/assets/js/'));
 });
 
 gulp.task('scripts.vendor', function () {
-	return gulp.src([
-		'site/src/js/Vendor/modernizr.js',
-		'site/src/js/Vendor/jquery-1.11.3.min.js',
-		'site/src/js/Vendor/jquery-ui-1.10.2.custom.min.js',
-		'site/src/js/Vendor/filter.min.js',
-		'site/src/js/Vendor/*.js'
-	])
-		.pipe(plumber({
-			handleError: function (err) {
-				console.log(err);
-				this.emit('end');
-			}
-		}))
-		.pipe(concat('vendor-bundle.js', { newLine: ';\n' }))
-		.pipe(gulpif(production, uglify()))
-		.pipe(gulp.dest('site/assets/js/'));
+    return gulp.src([
+        'site/src/js/Vendor/jquery-ui-1.10.2.custom.min.js',
+        'site/src/js/Vendor/filter.min.js',
+        'site/src/js/Vendor/*.js'
+    ])
+        .pipe(plumber({
+            handleError: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(concat('vendor-bundle.js', {newLine: ';\n'}))
+        .pipe(gulpif(production, uglify()))
+        .pipe(gulp.dest('site/assets/js/'));
 });
