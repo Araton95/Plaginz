@@ -1739,6 +1739,11 @@
 // Hover
 // Html
 // Icons
+
+//  TODO Add Images Checkbox
+// Images
+
+
 // Javascript
 // Jquery
 // Loader
@@ -1755,6 +1760,7 @@
 // Tooltips
 // Validation
 // Zoom
+
 
 
 var movies = [
@@ -1853,6 +1859,190 @@ var movies = [
       "Popup"
     ]
   },
+  {
+    "name": "SVG Slider ",
+    "img": "svgslider.png",
+    "demo": "https://codyhouse.co/demo/clipped-svg-slider/diamond.html",
+    "download": "",
+    "docs": "https://codyhouse.co/gem/clipped-svg-slider/",
+    "pluginType": [
+      "Jquery",
+      "Slider",
+      "SVG",
+      "CSS"
+    ]
+  },
+  {
+    "name": "SmartScroll ",
+    "img": "",
+    "demo": "http://www.responsivewebmobile.com/app/webroot/rwm_smartscroll/",
+    "download": "http://www.responsivewebmobile.com/app/webroot/rwm_smartscroll/js/jquery.smartscroll.min.js",
+    "docs": "http://www.responsivewebmobile.com/app/webroot/rwm_smartscroll/",
+    "pluginType": [
+      "Jquery",
+      "Scroll",
+    ]
+  },
+  {
+    "name": "PageLoader ",
+    "img": "pageloader.jpg",
+    "demo": "http://bonfirethemes.com/pageloader-add-on/",
+    "download": "http://bonfirethemes.com/pageloader-add-on/pageloader/pageloader.js",
+    "docs": "http://bonfirethemes.com/pageloader-add-on/",
+    "pluginType": [
+      "Jquery",
+      "Loader",
+      "SVG"
+    ]
+  },
+  {
+    "name": "MagicSlider ",
+    "img": "magicslider.jpg",
+    "demo": "http://www.responsivejqueryslider.com/magic/index.html",
+    "download": "http://www.responsivejqueryslider.com/magic/js/magic_slider.js",
+    "docs": "http://www.responsivejqueryslider.com/magic/index.html",
+    "pluginType": [
+      "Jquery",
+      "Slider",
+      "CSS"
+    ]
+  },
+  {
+    "name": "jqEasytooltip  ",
+    "img": "jqEasytooltip.jpg",
+    "demo": "http://jqeasytooltip.j3dlab.com/",
+    "download": "https://yadi.sk/d/Z2e0U6DQwCt2K",
+    "docs": "http://jqeasytooltip.j3dlab.com/",
+    "pluginType": [
+      "Jquery",
+      "Popup",
+      "Animation",
+      "CSS",
+      "Hover",
+    ]
+  },
+  {
+    "name": "JqueryVibrate",
+    "img": "jqueryvibrate.jpg",
+    "demo": "http://illyism.github.io/jquery.vibrate.js/",
+    "download": "https://github.com/Illyism/jquery.vibrate.js/archive/master.zip",
+    "docs": "http://jqeasytooltip.j3dlab.com/",
+    "pluginType": [
+      "Jquery",
+      "Other"
+    ]
+  },
+  {
+    "name": "Klax ",
+    "img": "Klax.jpg",
+    "demo": "http://www.shindiristudio.com/klax/index.html",
+    "download": "https://yadi.sk/d/kCG6BxOEwCutp",
+    "docs": "http://www.shindiristudio.com/klax/documentation.html",
+    "pluginType": [
+      "Jquery",
+      "Grid",
+      "Images",
+      "Animation"
+    ]
+  },
+  {
+    "name": "Nav Hider ",
+    "img": "navhider.png",
+    "demo": "https://codyhouse.co/demo/auto-hiding-navigation/nav-subnav.html",
+    "download": "https://codyhouse.co/redirect/?resource=auto-hiding-navigation",
+    "docs": "https://codyhouse.co/gem/auto-hiding-navigation/",
+    "pluginType": [
+      "Jquery",
+      "Scroll",
+      "CSS",
+      "Animation"
+    ]
+  },
+  {
+    "name": "TableSaw ",
+    "img": "tablesaw.jpg",
+    "demo": "http://filamentgroup.github.io/tablesaw/demo/stackonly.html",
+    "download": "https://github.com/filamentgroup/tablesaw/archive/master.zip",
+    "docs": "https://github.com/filamentgroup/tablesaw",
+    "pluginType": [
+      "Jquery",
+      "Grid"
+    ]
+  },
+  {
+    "name": "Timedropper",
+    "img": "timedropper.jpg",
+    "download": "https://github.com/felicegattuso/timedropper/archive/master.zip",
+    "demo": "http://felicegattuso.com/projects/timedropper/",
+    "docs": "https://github.com/felicegattuso/timedropper/",
+    "pluginType": [
+      "Jquery",
+      "Datepicker"
+    ]
+  },
+  {
+    "name": "BlurEffects",
+    "img": "blureffects.jpg",
+    "download": "https://github.com/SodhanaLibrary/jqImgBlurEffects/archive/master.zip",
+    "demo": "http://demo.sodhanalibrary.com/jqImgBlurEffects/demo_introduction.html",
+    "docs": "https://github.com/SodhanaLibrary/jqImgBlurEffects",
+    "pluginType": [
+      "Jquery",
+      "Images",
+       "Animation"
+    ]
+  },
+  {
+    "name": "Tabular Input",
+    "img": "tabularinput.png",
+    "download": "https://github.com/nCrafts/tabular-input/archive/master.zip",
+    "demo": "http://ncrafts.github.io/tabular-input/",
+    "docs": "https://github.com/ncrafts/tabular-input",
+    "pluginType": [
+      "Jquery",
+      "Forms",
+       "Grid"
+    ]
+  },
+  {
+    "name": "Custom SearchBar",
+    "img": "customsearchbar.png",
+    "download": "https://codyhouse.co/redirect/?resource=advanced-search-form",
+    "demo": "https://codyhouse.co/demo/advanced-search-form/index.html?select-category=all-categories",
+    "docs": "https://codyhouse.co/gem/advanced-search-form/",
+    "pluginType": [
+      "CSS",
+      "Jquery",
+       "Animation",
+       "Menu"
+    ]
+  },
+  {
+    "name": "Gif Preview",
+    "img": "gifpreview.jpg",
+    "download": "https://github.com/SodhanaLibrary/jqGifPreview/archive/master.zip",
+    "demo": "http://demo.sodhanalibrary.com/angular/gif_preview/jqGifPreview/demo.html",
+    "docs": "https://github.com/SodhanaLibrary/jqGifPreview",
+    "pluginType": [
+      "Jquery",
+       "Animation",
+       "Images",
+       "Other",
+    ]
+  },
+  {
+    "name": "Toolbar.Js ",
+    "img": "toolbarjs.jpg",
+    "download": "https://github.com/paulkinzett/toolbar/archive/master.zip",
+    "demo": "http://paulkinzett.github.io/toolbar/",
+    "docs": "https://github.com/paulkinzett/toolbar",
+    "pluginType": [
+      "Jquery",
+       "Animation",
+       "Hover",
+       "Popup"
+    ]
+  },
 ]
 ;
 $(document).ready(function(){
@@ -1901,7 +2091,7 @@ $(document).ready(function(){
       container: '#pagination',
       visiblePages: 5,
       perPage: {
-        values: [12, 15, 18],
+        values: [18, 24, 32],
         container: '#per_page'
       },
     }
