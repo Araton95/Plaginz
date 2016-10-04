@@ -2098,6 +2098,8 @@ $(document).ready(function(){
   });
 
 
+
+
   FJS.addCriteria({field: 'pluginType', ele: '#plugin-seciton_criteria input:checkbox'});
 
   window.FJS = FJS;

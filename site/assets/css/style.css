@@ -6922,7 +6922,7 @@ button.close {
   }
 }
 .material-design-hamburger button {
-  padding: 14px 10px;
+  padding: 14px 0;
   display: block;
   border: none;
   background: none;
@@ -6934,9 +6934,9 @@ button.close {
 }
 .material-design-hamburger__layer {
   display: block;
-  width: 40px;
-  height: 6px;
-  background: #eee;
+  width: 37px;
+  height: 5px;
+  background: #3b5998;
   position: relative;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
@@ -6944,7 +6944,7 @@ button.close {
 .material-design-hamburger__layer:before,
 .material-design-hamburger__layer:after {
   display: block;
-  width: inherit;
+  width: 100%;
   height: 6px;
   position: absolute;
   background: inherit;
@@ -7017,6 +7017,9 @@ button.close {
     margin: 3% 37%;
     width: 75%;
   }
+}
+.background--blur {
+  background: #004d40;
 }
 
 /*! jQuery UI - v1.10.2 - 2013-03-20
@@ -8760,6 +8763,9 @@ input:hover {
 }
 body {
   font-family: 'MyriadProRegular';
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
 }
 body .header {
   z-index: 100;
@@ -8825,6 +8831,7 @@ body .filter .container {
   position: relative;
 }
 body .filter .container .row .sidebar {
+  z-index: 100;
   position: fixed;
   top: 107px;
   height: calc(100vh - 107px);
@@ -8878,15 +8885,15 @@ body .filter .container .row .sidebar .well #plugin-seciton_criteria .checkbox l
 }
 body .filter .container .row .cards {
   width: calc(100% - 310px);
-  margin: 20px 25px 20px 310px;
+  margin: 20px 25px 20px 285px;
 }
 body .filter .container .row .cards .card {
   padding: 0;
   display: inline-block;
   margin: 0 20px 20px 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 220px;
-  height: 280px;
+  width: 205px;
+  height: 270px;
 }
 body .filter .container .row .cards .card .thumbnail {
   height: 100%;
@@ -8908,11 +8915,35 @@ body .filter .container .row .cards .card .thumbnail .caption .image .overflow {
 body .filter .container .row .cards .card .thumbnail .caption .image .overflow .plugin-pic {
   width: 100%;
 }
+body .filter .container .row .cards .card .thumbnail .caption .image .overflow .plugin-pic[src='Error.src'] {
+  display: none;
+}
+body .filter .container .row .cards .card .thumbnail .caption .image .overflow .image-default {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .filter .container .row .cards .card .thumbnail .caption .image .overflow .image-default h1 {
+  font-size: 32px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+body .filter .container .row .cards .card .thumbnail .caption .image .overflow.no-image {
+  display: block;
+  width: 100%;
+  background-color: #3b5998;
+  text-align: center;
+}
+body .filter .container .row .cards .card .thumbnail .caption .image .overflow.no-image .image-default {
+  display: block;
+}
 body .filter .container .row .cards .card .thumbnail .caption .image .download,
 body .filter .container .row .cards .card .thumbnail .caption .image .demo {
   background-color: #FFBC42;
   position: absolute;
-  bottom: -14px;
+  bottom: -21px;
   right: 3px;
   width: 45px;
   height: 45px;
@@ -8973,18 +9004,53 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
     margin: 20px 25px 20px 225px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   body .top_navigation .container .row .material-design-hamburger {
     display: block;
+  }
+  body .top_navigation .container .row .search-area {
+    width: 60%;
+    margin-right: 15px;
+    float: right;
+  }
+  body .top_navigation .container .row .pagination-area {
+    display: none;
   }
   body .top_navigation .container .row .pagination-area .row .content .col-lg-2 {
     display: none;
   }
   body .filter .container .row .sidebar {
     width: 200px;
+    left: -100%;
+  }
+  body .filter .container .row .sidebar.menu--on {
+    left: 0;
   }
   body .filter .container .row .cards {
+    text-align: center;
     width: 100%;
     margin: 20px 0 20px 0;
+  }
+  body .filter .container .row .cards .card {
+    text-align: left;
+  }
+}
+@media (max-width: 467px) {
+  body .filter .container .row {
+    margin: 0;
+  }
+  body .filter .container .row .sidebar {
+    width: 250px;
+  }
+  body .filter .container .row .sidebar .well #plugin-seciton_criteria {
+    width: 250px;
+  }
+  body .filter .container .row .cards {
+    padding: 0;
+  }
+  body .filter .container .row .cards .card {
+    margin-right: 0;
+    padding: 0;
+    width: 100%;
   }
 }

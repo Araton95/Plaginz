@@ -14,7 +14,7 @@ gulp.task('scripts', ['scripts.app', 'scripts.vendor']);
 gulp.task('scripts.app', function () {
     return gulp.src([
         'site/src/js/Vendor/jquery-1.11.3.min.js',
-        'site/src/js/main.js'
+        'site/src/js/Main.js'
     ])
         .pipe(plumber({
             handleError: function (err) {
