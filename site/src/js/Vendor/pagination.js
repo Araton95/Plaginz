@@ -16,7 +16,7 @@ $(document).ready(function(){
       var c = $(this), count = 0
 
       if(result.length > 0){
-        count = jQ.where({ 'plugin-seciton': c.val() }).count;
+        count = jQ.where({ 'pluginType': c.val() }).count;
       }
 
       console.log(result.length);
@@ -50,68 +50,13 @@ $(document).ready(function(){
     }
   });
 
-  FJS.addCallback('beforeAddRecords', function(){
-    if(this.recordsCount >= 450){
-      this.stopStreaming();
-    }
-  });
 
-  FJS.addCallback('afterAddRecords', function(){
-    var percent = (this.recordsCount - 250)*100/250;
-
-    $('#stream_progress').text(percent + '%').attr('style', 'width: '+ percent +'%;');
-
-    if (percent == 100){
-      $('#stream_progress').parent().fadeOut(1000);
-    }
-  });
-
-  // FJS.setStreaming({
-  //   data_url: 'data/stream_movies.json',
-  //   stream_after: 1,
-  //   batch_size: 50
-  // });
-
-  FJS.addCriteria({field: 'year', ele: '#year_filter', type: 'range', all: 'all'});
-  FJS.addCriteria({field: 'rating', ele: '#rating_filter', type: 'range'});
-  FJS.addCriteria({field: 'runtime', ele: '#runtime_filter', type: 'range'});
-  FJS.addCriteria({field: 'plugin-seciton', ele: '#plugin-seciton_criteria input:checkbox'});
-
-  /*
-   * Add multiple criterial.
-    FJS.addCriteria([
-      {field: 'plugin-seciton', ele: '#plugin-seciton_criteria input:checkbox'},
-      {field: 'year', ele: '#year_filter', type: 'range'}
-    ])
-  */
+  FJS.addCriteria({field: 'pluginType', ele: '#plugin-seciton_criteria input:checkbox'});
 
   window.FJS = FJS;
 });
 
 function initSliders(){
-  $("#rating_slider").slider({
-    min: 8,
-    max: 10,
-    values:[8, 10],
-    step: 0.1,
-    range:true,
-    slide: function( event, ui ) {
-      $("#rating_range_label" ).html(ui.values[ 0 ] + ' - ' + ui.values[ 1 ]);
-      $('#rating_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
-    }
-  });
-
-  $("#runtime_slider").slider({
-    min: 50,
-    max: 250,
-    values:[0, 250],
-    step: 10,
-    range:true,
-    slide: function( event, ui ) {
-      $("#runtime_range_label" ).html(ui.values[ 0 ] + ' mins. - ' + ui.values[ 1 ] + ' mins.');
-      $('#runtime_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
-    }
-  });
 
   $('#plugin-seciton_criteria :checkbox').prop('checked', false);
   $('#all_plugin-seciton').on('click', function(){

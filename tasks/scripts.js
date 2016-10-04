@@ -35,7 +35,8 @@ gulp.task('scripts.vendor', function () {
     return gulp.src([
         'site/src/js/Vendor/jquery-ui-1.10.2.custom.min.js',
         'site/src/js/Vendor/filter.min.js',
-        'site/src/js/Vendor/*.js'
+        'site/src/js/Vendor/movies.js',
+        'site/src/js/Vendor/pagination.js'
     ])
         .pipe(plumber({
             handleError: function (err) {
