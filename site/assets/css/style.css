@@ -8761,6 +8761,7 @@ input:hover {
   overflow: hidden;
   max-height: 100vh;
   height: 100%;
+  pointer-events: all;
 }
 .container {
   margin: 0;
