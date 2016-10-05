@@ -10,7 +10,7 @@ var svgo = require('imagemin-svgo');
 var production = require('../gulpfile');
 
 gulp.task('images', function () {
-	return gulp.src('site/src/images/*')
+	return gulp.src('site/src/images/*/*')
 		.pipe(plumber({
 			handleError: function (err) {
 				console.log(err);
