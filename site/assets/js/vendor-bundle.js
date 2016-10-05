@@ -1742,6 +1742,7 @@
 // Images
 // Javascript
 // Jquery
+// Library
 // Loader
 // Map
 // Menu
@@ -2039,6 +2040,77 @@ var movies = [
        "Popup"
     ]
   },
+  {
+    "name": "Bootstrap",
+    "img": "bootstrap.png",
+    "download": "https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip",
+    "demo": "http://getbootstrap.com/getting-started/#examples",
+    "docs": "http://getbootstrap.com/getting-started/",
+    "pluginType": [
+      "CSS",
+       "Grid",
+       "Library"
+    ]
+  },
+  {
+    "name": "jQuery",
+    "img": "jquery.gif",
+    "download": "http://underscorejs.org/underscore.js",
+    "demo": "http://www.w3schools.com/jquery/jquery_examples.asp",
+    "docs": "https://api.jquery.com/",
+    "pluginType": [
+      "Javascript",
+       "Jquery",
+       "Library"
+    ]
+  },
+  {
+    "name": "Underscore",
+    "img": "underscore.png",
+    "download": "http://underscorejs.org/underscore.js",
+    "demo": "https://www.sitepoint.com/getting-started-with-underscore-js/",
+    "docs": "http://underscorejs.org/#collections",
+    "pluginType": [
+      "Javascript",
+       "Library"
+    ]
+  },
+  {
+    "name": "Lodash",
+    "img": "lodash.png",
+    "download": "https://raw.githubusercontent.com/lodash/lodash/4.16.3/dist/lodash.js",
+    "demo": "https://lodash.com/docs/4.16.3",
+    "docs": "https://lodash.com/",
+    "pluginType": [
+      "Javascript",
+       "Library"
+    ]
+  },
+  {
+    "name": "Three.Js",
+    "img": "threejs.png",
+    "download": "https://github.com/mrdoob/three.js/archive/master.zip",
+    "demo": "https://threejs.org/examples/",
+    "docs": "https://threejs.org/docs/index.html#Manual/Introduction/Creating_a_scene",
+    "pluginType": [
+      "Javascript",
+       "Library",
+        "Animation"
+    ]
+  },
+  {
+    "name": "GreenSock",
+    "img": "greensock.jpg",
+    "download": "",
+    "demo": "https://greensock.com/examples-showcases",
+    "docs": "https://greensock.com/docs/#/HTML5/",
+    "pluginType": [
+      "Javascript",
+       "Library",
+      "Animation",
+        "SVG"
+    ]
+  },
 ]
 ;
 $(document).ready(function () {
@@ -2117,6 +2189,7 @@ $(document).ready(function () {
 function initSliders() {
     $('#plugin-seciton_criteria :checkbox').prop('checked', false);
     $('#all_plugin-seciton').on('click', function () {
+
         $('#plugin-seciton_criteria :checkbox').prop('checked', $(this).is(':checked'));
         $('#searchbox').val('');
     });
