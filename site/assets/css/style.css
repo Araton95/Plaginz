@@ -7020,6 +7020,9 @@ button.close {
 }
 .no-scroll {
   overflow: hidden;
+  max-height: 100vh;
+  height: 100%;
+  pointer-events: none;
 }
 
 /*! jQuery UI - v1.10.2 - 2013-03-20
@@ -8774,6 +8777,8 @@ body .header {
   z-index: 100;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   background-color: #3b5998;
   text-align: left;
@@ -8790,6 +8795,8 @@ body .top_navigation {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: fixed;
   top: 43px;
+  left: 0;
+  right: 0;
   width: 100%;
 }
 body .top_navigation:hover {
