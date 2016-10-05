@@ -7018,12 +7018,6 @@ button.close {
     width: 75%;
   }
 }
-.no-scroll {
-  overflow: hidden;
-  max-height: 100vh;
-  height: 100%;
-  pointer-events: none;
-}
 
 /*! jQuery UI - v1.10.2 - 2013-03-20
 * http://jqueryui.com
@@ -8762,6 +8756,12 @@ input:hover {
 }
 .card-shadow:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.no-scroll {
+  overflow: hidden;
+  max-height: 100vh;
+  height: 100%;
+  pointer-events: all;
 }
 .container {
   margin: 0;
