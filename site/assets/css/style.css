@@ -8755,6 +8755,10 @@ input:hover {
 
 .card-shadow {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.card-shadow:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .container {
   margin: 0;
@@ -8783,9 +8787,16 @@ body .top_navigation {
   z-index: 100;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: fixed;
   top: 43px;
   width: 100%;
+}
+body .top_navigation:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+body .top_navigation:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 body .top_navigation .container .row .material-design-hamburger {
   float: left;
@@ -8816,7 +8827,7 @@ body .top_navigation .container .row .pagination-area .content .pagination li a 
   cursor: pointer;
 }
 body .top_navigation .container .row .pagination-area .content .col-lg-2 {
-  text-align: right;
+  display: none;
 }
 body .top_navigation .container > .row {
   padding: 15px 0;
@@ -8839,7 +8850,11 @@ body .filter .container .row .sidebar {
   width: 260px;
   padding: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   background-color: #fff;
+}
+body .filter .container .row .sidebar:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 body .filter .container .row .sidebar .well {
   border: none;
@@ -8891,8 +8906,12 @@ body .filter .container .row .cards .card {
   display: inline-block;
   margin: 0 20px 20px 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   width: 205px;
   height: 270px;
+}
+body .filter .container .row .cards .card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 body .filter .container .row .cards .card .thumbnail {
   height: 100%;

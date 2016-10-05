@@ -1,8 +1,7 @@
 $(document).ready(function () {
+    $("img.plugin-pic").lazyload();
     (function() {
-
         'use strict';
-
         document.querySelector('.material-design-hamburger__icon').addEventListener(
             'click',
             function() {
