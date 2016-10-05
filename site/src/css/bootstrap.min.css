@@ -130,10 +130,5 @@
     }
 }
 
-.no-scroll {
-    overflow: hidden;
-    max-height: 100vh;
-    height: 100%;
-}
 
 
