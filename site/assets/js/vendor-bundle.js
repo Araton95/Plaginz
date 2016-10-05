@@ -1746,6 +1746,7 @@
 // Loader
 // Map
 // Menu
+// Other
 // Parallax
 // Popup
 // Scroll
@@ -1757,8 +1758,6 @@
 // Tooltips
 // Validation
 // Zoom
-
-
 
 var movies = [
   {
@@ -2109,6 +2108,30 @@ var movies = [
        "Library",
       "Animation",
         "SVG"
+    ]
+  },
+  {
+    "name": "Babylon.js",
+    "img": "babylonjs.png",
+    "download": "http://cdn.babylonjs.com/2-4/babylon.core.js",
+    "demo": "http://www.babylonjs.com/#featuresdemossection",
+    "docs": "http://doc.babylonjs.com/",
+    "pluginType": [
+      "Javascript",
+       "Library",
+      "Animation",
+        "3D"
+    ]
+  },
+  {
+    "name": "Boba.js",
+    "img": "boba.jpg",
+    "download": "http://boba.space150.com/javascripts/boba.js",
+    "demo": "http://boba.space150.com/",
+    "docs": "https://github.com/space150/boba.js",
+    "pluginType": [
+      "Javascript",
+       "Other"
     ]
   },
 ]
