@@ -1739,11 +1739,7 @@
 // Hover
 // Html
 // Icons
-
-//  TODO Add Images Checkbox
 // Images
-
-
 // Javascript
 // Jquery
 // Loader
@@ -2082,17 +2078,14 @@ $(document).ready(function () {
     card_quantity = movies.length;
 
 
-    if ($(window).width() >= 769 )
-    {
+    if ($(window).width() >= 769) {
         card_quantity_per_page = Math.floor(($(window).width() - $('.sidebar').width() - 50 ) / 225);
     }
     else {
-        if ($(window).width() <= 467 )
-        {
-            card_quantity_per_page = card_quantity  / 3;
+        if ($(window).width() <= 467) {
+            card_quantity_per_page = card_quantity / 3;
         }
-        else
-        {
+        else {
             card_quantity_per_page = 6;
         }
     }
@@ -2108,7 +2101,7 @@ $(document).ready(function () {
             container: '#pagination',
             visiblePages: 5,
             perPage: {
-                values: [card_quantity_per_page*3, 24, 32],
+                values: [card_quantity_per_page * 3, 24, 32],
                 container: '#per_page'
             },
         }
