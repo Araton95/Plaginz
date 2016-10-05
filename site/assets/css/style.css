@@ -7018,8 +7018,8 @@ button.close {
     width: 75%;
   }
 }
-.background--blur {
-  background: #004d40;
+.no-scroll {
+  overflow: hidden;
 }
 
 /*! jQuery UI - v1.10.2 - 2013-03-20
@@ -9036,6 +9036,19 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
   }
   body .top_navigation .container .row .pagination-area .row .content .col-lg-2 {
     display: none;
+  }
+  body .filter .overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+  }
+  body .filter .overlay.on {
+    opacity: 1;
   }
   body .filter .container .row .sidebar {
     width: 200px;

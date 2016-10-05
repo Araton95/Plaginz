@@ -130,6 +130,8 @@
     }
 }
 
-.background--blur {
-    background: #004d40;
+.no-scroll {
+    overflow: hidden;
 }
+
+

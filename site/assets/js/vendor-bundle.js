@@ -2118,10 +2118,10 @@ $(document).ready(function () {
 
     window.FJS = FJS;
 
+    $("img.plugin-pic").lazyload();
 });
 
 function initSliders() {
-
     $('#plugin-seciton_criteria :checkbox').prop('checked', false);
     $('#all_plugin-seciton').on('click', function () {
         $('#plugin-seciton_criteria :checkbox').prop('checked', $(this).is(':checked'));
