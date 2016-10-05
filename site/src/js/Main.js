@@ -8,7 +8,7 @@ $(document).ready(function () {
 
                 $('body').toggleClass('no-scroll', [400]);
                 $('.sidebar').toggleClass('menu--on', [400]);
-                $('.filter .overlay').toggleClass('on', [400]);
+                $('.filter .overlay').toggleClass('on');
 
 
                 child = this.childNodes[1].classList;
