@@ -1,14 +1,14 @@
 $(document).ready(function () {
-    (function() {
+    (function () {
         'use strict';
         document.querySelector('.material-design-hamburger__icon').addEventListener(
             'click',
-            function() {
+            function () {
                 var child;
 
-                $('body').toggleClass('no-scroll',[400]);
-                $('.sidebar').toggleClass('menu--on',[400]);
-                $('.filter .overlay').toggleClass('on',[400]);
+                $('body').toggleClass('no-scroll', [400]);
+                $('.sidebar').toggleClass('menu--on', [400]);
+                $('.filter .overlay').toggleClass('on', [400]);
 
 
                 child = this.childNodes[1].classList;

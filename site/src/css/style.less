@@ -10,14 +10,18 @@
 @gray: #e9ebee;
 
 .card-shadow {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 
   &:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 }
-
+.no-scroll {
+  overflow: hidden;
+  max-height: 100vh;
+  height: 100%;
+}
 .container {
   margin: 0;
   width: 100%;
@@ -61,7 +65,7 @@ body {
     width: 100%;
 
     &:hover {
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
 
     .container {
@@ -218,7 +222,7 @@ body {
 
                     .plugin-pic {
                       width: 100%;
-                      &[src='Error.src']{
+                      &[src='Error.src'] {
                         display: none;
                       }
                     }
@@ -228,7 +232,7 @@ body {
                       position: absolute;
                       top: 50%;
                       left: 50%;
-                      transform: translate(-50%,-50%);
+                      transform: translate(-50%, -50%);
 
                       h1 {
                         font-size: 32px;
@@ -356,7 +360,6 @@ body {
     }
   }
 }
-
 @media (max-width: 769px) {
   body {
     .top_navigation {
@@ -393,7 +396,7 @@ body {
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: 1;
         opacity: 0;
 
@@ -427,13 +430,12 @@ body {
     }
   }
 }
-
 @media (max-width: 467px) {
   body {
     .filter {
       .container {
         .row {
-         margin: 0;
+          margin: 0;
 
           .sidebar {
             width: 250px;

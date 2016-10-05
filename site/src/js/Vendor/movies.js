@@ -15,11 +15,7 @@
 // Hover
 // Html
 // Icons
-
-//  TODO Add Images Checkbox
 // Images
-
-
 // Javascript
 // Jquery
 // Loader
