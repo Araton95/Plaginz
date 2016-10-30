@@ -411,14 +411,15 @@ var movies = [
     ]
   },
   {
-    "name": "MissPlete",
-    "img": "boba.jpg",
-    "download": "http://boba.space150.com/javascripts/boba.js",
+    "name": "MissPlete Form",
+    "img": "missplate.jpg",
+    "download": "https://github.com/xavi/miss-plete/archive/gh-pages.zip",
     "demo": "http://xavi.github.io/miss-plete/",
     "docs": "https://github.com/xavi/miss-plete",
     "pluginType": [
       "Javascript",
-       "Other"
+       "Autocomplete",
+        "Forms"
     ]
   },
 ]

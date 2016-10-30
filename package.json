@@ -1,7 +1,7 @@
 {
-  "name": "skeletton",
+  "name": "Plaginz",
   "version": "1.0.0",
-  "description": "Doctornet frontend template",
+  "description": "Plugins big filter for frontend developer",
   "private": true,
   "devDependencies": {
     "bourbon": "^4.2.7",
