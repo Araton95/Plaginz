@@ -7608,7 +7608,6 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-slider.ui-state-disabled .ui-slider-handle,
 .ui-slider.ui-state-disabled .ui-slider-range {
-  -webkit-filter: inherit;
   filter: inherit;
 }
 .ui-slider-horizontal {
@@ -8786,6 +8785,15 @@ body .header .container .row img {
   margin-left: 11px;
   width: 117px;
 }
+body .header .by {
+  color: #fff;
+  float: right;
+  margin: 8px 11px;
+  font-size: 16px;
+}
+body .header .by a {
+  color: #fff;
+}
 body .top_navigation {
   z-index: 100;
   background-color: #fff;
@@ -8968,9 +8976,9 @@ body .filter .container .row .cards .card .thumbnail .caption .image .demo {
   position: absolute;
   bottom: -21px;
   right: 3px;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   border-radius: 50%;
   transition: all 0.3s ease;
