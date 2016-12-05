@@ -4,10 +4,10 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
 
-app.use('/site', express.static(path.resolve('site')));
+app.use('/site', express.static(path.resolve('../site')));
 
 app.get('/', function (req, res) {
-    res.sendFile(path.resolve('index.html'));
+    res.sendFile(path.resolve('../index.html'));
 });
 
 io.on('connection', function (socket) {
@@ -16,6 +16,6 @@ io.on('connection', function (socket) {
     });
 });
 
-http.listen(8080, function () {
+http.listen(80, function () {
     console.log("listenin");
 });
