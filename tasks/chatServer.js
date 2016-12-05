@@ -6,7 +6,7 @@ var path = require('path');
 
 app.use('/site', express.static(path.resolve('../site')));
 
-app.get('/', function (req, res) {
+app.get('/Plaginz', function (req, res) {
     res.sendFile(path.resolve('../index.html'));
 });
 
