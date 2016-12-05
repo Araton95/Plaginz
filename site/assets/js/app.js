@@ -29,6 +29,7 @@ $(document).ready(function () {
                 }
             });
     })();
+
     $('.header').on('click touch', function () {
         $("html, body").animate({ scrollTop: 0 }, 500);
     })

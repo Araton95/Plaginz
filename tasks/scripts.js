@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
+//var express = require('express');
 
 var production = require('../gulpfile');
 
@@ -37,7 +38,8 @@ gulp.task('scripts.vendor', function () {
         'site/src/js/Vendor/jquery-ui-1.10.2.custom.min.js',
         'site/src/js/Vendor/filter.min.js',
         'site/src/js/Vendor/movies.js',
-        'site/src/js/Vendor/pagination.js'
+        'site/src/js/Vendor/pagination.js' ,
+        'site/src/js/Vendor/*.js'
     ])
         .pipe(plumber({
             handleError: function (err) {

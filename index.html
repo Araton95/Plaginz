@@ -50,6 +50,9 @@
 <div class="top_navigation">
     <div class="container">
         <div class="row">
+
+            <img class="img-responsive chatToggleIcon" src="site\logo\icon-chat.png">
+
             <section class="col-xs-3 material-design-hamburger">
                 <button class="material-design-hamburger__icon">
                     <span class="material-design-hamburger__layer"></span>
@@ -305,6 +308,27 @@
             <div class="cards col-lg-10">
                 <div class="movies row" id="movies"></div>
             </div>
+            <!-- Main Chat  -->
+        <div class="col-lg-5 charWrapper">
+            <div class="col-xs-12 col-sm-6 col-md-8 chat">
+                <div class="chat-title">
+                    <h2>Chat bot listens</h2>
+                </div>
+                <div class="messages">
+                    <div class="messages-content"></div>
+                </div>
+                <div class="message-box">
+                    <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+                    <button type="submit" class="message-submit">Send</button>
+                </div>
+            </div>
+        </div>
+
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-8 chatSize">.col-xs-12 .col-sm-6 .col-md-8</div>-->
+            <!--
+            End of Chat  :?
+            -->
         </div>
     </div>
 </main>
@@ -315,7 +339,7 @@
             <div class="caption">
                 <div class="image">
                     <div class="overflow">
-                        <img class="plugin-pic" src="./site/logo/<%= img %>" alt="Plugin image"
+                        <img class="plugin-pic" src="site/logo/<%= img %>" alt="Plugin image"
                              onError="
                              this.onerror=null;
                              this.parentElement.className += ' no-image';
@@ -356,9 +380,20 @@
         </label>
     </div>
 </script>
-
+<script src="/socket.io/socket.io.js"></script>
 <script src="site/assets/js/app.js" type="text/javascript"></script>
 <script src="site/assets/js/vendor-bundle.js" type="text/javascript"></script>
+<script>
+    var socket = io();
+    $('.message-submit').on('click', function () {
+        socket.emit('chat message', $('.message-input').val());
+        $('.message-input').val('');
+        return false;
+    });
+    socket.on('chat message', function (msg) {
+        $('.messages-content').append(msg + '<br>');
 
+    });
+</script>
 </body>
 </html>

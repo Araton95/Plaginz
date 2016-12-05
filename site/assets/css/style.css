@@ -9100,3 +9100,164 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
     width: 100%;
   }
 }
+/* Chatter */
+
+.charWrapper {
+  position: fixed;
+  left: 84%;
+  height: 55%;
+  display: none;
+}
+
+.chatToggleIcon {
+  width: 3%;
+  position: absolute;
+  left: 96%;
+  bottom: 4%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.chat {
+  width: 248px;
+  height: 48vh;
+  max-height: 500px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chat-title {
+  flex: 0 1 45px;
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 10px 10px 10px 50px;
+}
+
+.chat-title>h2 {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.messages {
+  flex: 1 1 auto;
+  color: rgba(255, 255, 255, .5);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.messages-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 101%;
+  width: 100%;
+}
+
+.message-box {
+  flex: 0 1 40px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  position: relative;
+}
+
+.message-input {
+  background: none;
+  border: none;
+  outline: none!important;
+  resize: none;
+  color: rgba(255, 255, 255, .7);
+  font-size: 14px;
+  height: 17px;
+  margin: 0;
+  padding-right: 20px;
+  width: 265px;
+}
+
+.message-submit {
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  background: #248A52;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 10px;
+  outline: none!important;
+  transition: background .2s ease;
+}
+
+@media screen and (max-width: 1451px) {
+  .charWrapper {
+    position: fixed;
+    left: 82%;
+    height: 55%;
+  }
+}
+
+@media screen and (max-width: 1199px), screen and (max-height: 199px){
+  .charWrapper {
+    position: fixed;
+    left: 77%;
+    height: 55%;
+    top: 49%;
+  }
+}
+
+@media screen and (max-width: 916px), screen and (max-height: 199px) {
+  .charWrapper {
+    position: fixed;
+    left: 70%;
+    height: 55%;
+    top: 49%;
+  }
+}
+
+@media screen and (max-width: 769px), screen and (max-height: 199px) {
+  .chatToggleIcon{
+    width: 4%;
+    position: absolute;
+    left: 16%;
+    bottom: 4%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .charWrapper {
+    position: fixed;
+    left: 64%;
+    height: 55%;
+    top: 49%;
+  }
+}
+
+@media screen and (max-width: 620px), screen and (max-height: 199px) {
+  .chatToggleIcon{
+    width: 4%;
+    position: absolute;
+    left: 16%;
+    bottom: 4%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .charWrapper {
+    position: fixed;
+    left: 38%;
+    height: 55%;
+    top: 49%;
+  }
+}
