@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var http = app.listen(80);
+var http = app.listen(80, "::");
 var io = require('socket.io').listen(http);
 var path = require('path');
 
