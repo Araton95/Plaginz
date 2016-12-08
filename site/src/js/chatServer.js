@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var http = app.listen(80);
+var io = require('socket.io').listen(http);
 var path = require('path');
 
 app.use('/site', express.static(path.resolve('../../../site')));
@@ -16,6 +16,6 @@ io.on('connection', function (socket) {
     });
 });
 
-http.listen(80, function () {
-    console.log("listenin");
-});
+http.on("listening", function () {
+    console.log("listening");
+})
