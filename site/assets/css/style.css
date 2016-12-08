@@ -9101,14 +9101,12 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
   }
 }
 /* Chatter */
-
 .charWrapper {
   position: fixed;
   left: 84%;
   height: 55%;
   display: none;
 }
-
 .chatToggleIcon {
   width: 3%;
   position: absolute;
@@ -9117,20 +9115,21 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
   cursor: pointer;
   z-index: 1;
 }
-
 .chat {
   width: 248px;
   height: 48vh;
   max-height: 500px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
-  background: rgba(0, 0, 0, .5);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
 }
-
 .chat-title {
+  -ms-flex: 0 1 45px;
   flex: 0 1 45px;
   position: relative;
   z-index: 2;
@@ -9140,22 +9139,20 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
   text-align: left;
   padding: 10px 10px 10px 50px;
 }
-
-.chat-title>h2 {
+.chat-title > h2 {
   font-weight: normal;
   font-size: 20px;
   margin: 0;
   padding: 0;
 }
-
 .messages {
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
   position: relative;
   width: 100%;
 }
-
 .messages-content {
   position: absolute;
   top: 0;
@@ -9163,28 +9160,26 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
   height: 101%;
   width: 100%;
 }
-
 .message-box {
+  -ms-flex: 0 1 40px;
   flex: 0 1 40px;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
   padding: 10px;
   position: relative;
 }
-
 .message-input {
   background: none;
   border: none;
   outline: none!important;
   resize: none;
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
   height: 17px;
   margin: 0;
   padding-right: 20px;
   width: 265px;
 }
-
 .message-submit {
   position: absolute;
   z-index: 1;
@@ -9201,7 +9196,6 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
   outline: none!important;
   transition: background .2s ease;
 }
-
 @media screen and (max-width: 1451px) {
   .charWrapper {
     position: fixed;
@@ -9209,8 +9203,7 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
     height: 55%;
   }
 }
-
-@media screen and (max-width: 1199px), screen and (max-height: 199px){
+@media screen and (max-width: 1199px), screen and (max-height: 199px) {
   .charWrapper {
     position: fixed;
     left: 77%;
@@ -9218,7 +9211,6 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
     top: 49%;
   }
 }
-
 @media screen and (max-width: 916px), screen and (max-height: 199px) {
   .charWrapper {
     position: fixed;
@@ -9227,9 +9219,8 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
     top: 49%;
   }
 }
-
 @media screen and (max-width: 769px), screen and (max-height: 199px) {
-  .chatToggleIcon{
+  .chatToggleIcon {
     width: 4%;
     position: absolute;
     left: 16%;
@@ -9244,9 +9235,8 @@ body .filter .container .row .cards .card .thumbnail .about-makers a:hover {
     top: 49%;
   }
 }
-
 @media screen and (max-width: 620px), screen and (max-height: 199px) {
-  .chatToggleIcon{
+  .chatToggleIcon {
     width: 4%;
     position: absolute;
     left: 16%;

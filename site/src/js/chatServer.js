@@ -4,10 +4,10 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
 
-app.use('/site', express.static(path.resolve('../../../../site')));
+app.use('/site', express.static(path.resolve('../../../site')));
 
 app.get('/Plaginz', function (req, res) {
-    res.sendFile(path.resolve('../../../../index.html'));
+    res.sendFile(path.resolve('../../../index.html'));
 });
 
 io.on('connection', function (socket) {
