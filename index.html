@@ -384,7 +384,16 @@
 <script src="site/assets/js/app.js" type="text/javascript"></script>
 <script src="site/assets/js/vendor-bundle.js" type="text/javascript"></script>
 <script>
-    var socket = io("https://araton95.github.io");
+        var socket = io({
+        transports: [
+            'websocket',
+            'flashsocket',
+            'htmlfile',
+            'xhr-polling',
+            'jsonp-polling',
+            'polling'
+        ]
+    });
     $('.message-submit').on('click', function () {
         socket.emit('chat message', $('.message-input').val());
         $('.message-input').val('');
