@@ -1,8 +1,9 @@
+var PORT = process.env.PORT = 8080;
 var express = require('express');
 var app = express();
-var http = app.listen(process.env.PORT || 8080);
-var io = require('socket.io').listen(http);
+var http = app.listen(PORT || 80);
 var path = require('path');
+var io = require('socket.io').listen(http);
 
 app.use('/site', express.static(path.resolve('site')));
 
@@ -16,6 +17,6 @@ io.on('connection', function (socket) {
     });
 });
 
-http.on("listening", function () {
-    console.log("listening " + process.env.PORT);
-})
+ http.on("listening", function () {
+     console.log("listening " + process.env.PORT);
+ })
