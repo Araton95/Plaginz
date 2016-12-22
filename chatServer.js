@@ -1,13 +1,15 @@
-var PORT = process.env.PORT = 8080;
-var express = require('express');
-var app = express();
-var http = app.listen(PORT || 80);
+var PORT = process.env.PORT = 80;
+var express = require('express')
+var app = express()
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 var path = require('path');
-var io = require('socket.io').listen(http);
 
-app.use('/site', express.static(path.resolve('site')));
+app.use('/site/assets', express.static(path.resolve('site/assets')));
+app.use('/site/logo', express.static(path.resolve('site/logo')));
+app.use('/site/src/images', express.static(path.resolve('site/src/images')));
 
-app.get('/Plaginz', function (req, res) {
+app.get('/', function(req, res){
     res.sendFile(path.resolve('index.html'));
 });
 
@@ -17,6 +19,6 @@ io.on('connection', function (socket) {
     });
 });
 
- http.on("listening", function () {
-     console.log("listening " + process.env.PORT);
- })
+http.listen(PORT, function(){
+    console.log('listening on :' + PORT);
+});
